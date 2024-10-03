@@ -1,0 +1,115 @@
+:root {
+  --orange-main: #ec5e2a;
+  --orange-primary: #f28f6a;
+  --orange-second: #f6af95;
+  --orange-02: rgba(236, 94, 42, 0.2);
+  --orange-03: rgba(236, 94, 42, 0.3);
+  --orange-05: rgba(236, 94, 42, 0.5);
+  --orange-07: rgba(236, 94, 42, 0.7);
+  --red-main: red;
+  --red-08: rgba(255, 0, 0, 0.8);
+  --green-main: #369260;
+  --green-second: #71d8a0;
+  --blue-main: #17314f;
+  --blue-secondary: #292d32;
+  --blue-primary: #00579f;
+  --blue-sale: #073d69;
+  --white-main: #fff;
+  --white-300: #f7f7f7;
+  --white-400: #f2f2f2;
+  --white-500: #eaeaea;
+  --white-600: #d9d9d9;
+  --gray-main: #666;
+  --gray-secondary: #ddd;
+  --black-main: #000;
+  --black-08: rgba(0, 0, 0, 0.8);
+  --black-07: rgba(0, 0, 0, 0.7);
+  --black-06: rgba(0, 0, 0, 0.6);
+  --black-04: rgba(0, 0, 0, 0.4);
+  --blue-night-main: #042744;
+  --blue-night-second: #103b5f;
+  --product-white: #fff;
+  --product-white-400: #f2f2f2;
+  --product-black: #000;
+  --product-black-08: rgba(0, 0, 0, 0.8);
+  --product-black-07: rgba(0, 0, 0, 0.7);
+  --product-black-07-second: rgba(0, 0, 0, 0.7);
+  --product-black-06: rgba(0, 0, 0, 0.6);
+  --product-action-white: #fff;
+  --product-action-white-400: #f2f2f2;
+  --product-saleTimer-white: #f7f7f7;
+  --product-cheapTogether-white: #fff;
+  --product-cheapTogether-white-300: #f7f7f7;
+  --productCard-white: #fff;
+  --productCard-compare-white-400: #f2f2f2;
+  --product-branch-white: #fff;
+  --product-saleTimer-white-400: #f2f2f2;
+  --product-action-white-mobile: #fff;
+  --product-branch-white-400: #f2f2f2;
+  --product-floatBar-oldPrice-black: #fff;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("./fonts/segoe-ui-this/segoeuithis.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Oxygen";
+  src: url("fonts/Oxygen/Oxygen-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("fonts/Ubuntu/Ubuntu-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url("fonts/Cantarell/Cantarell-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Sans";
+  src: url("fonts/Fira_Sans/FiraSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Droid Sans";
+  src: url("fonts/droid-sans-2/DroidSans.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("fonts/helvetica-neue-5/HelveticaNeueBlack.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+body,
+html {
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "sans-serif";
+}
+@media screen and (max-width: 1440px) {
+}
+@media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 480px) {
+}
