@@ -17,7 +17,7 @@ fetch("products.json")
   .then((response) => response.json())
   .then((data) => {
     const carousel = document.querySelector(".product-carousel");
-    data.products.forEach((product) => {
+    data.eager.forEach((product) => {
       const productCard = document.createElement("div");
       productCard.className = "product-card";
       productCard.innerHTML = `
