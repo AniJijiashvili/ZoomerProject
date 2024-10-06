@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.product-section {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+}
+
+.product-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+}
+
+.product-carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.product-card {
+  min-width: 200px;
+  max-width: 200px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff;
+  scroll-snap-align: start;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product-installment {
+  font-size: 14px;
+  color: #888;
+}
+
+.product-link {
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.compare-btn,
+.add-cart-btn {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.compare-btn {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.add-cart-btn {
+  background-color: #ff7f50;
+  color: #fff;
+}
+
+.carousel-nav {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
