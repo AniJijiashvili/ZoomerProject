@@ -6,29 +6,37 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="product-section">
-      <h2 class="section-title">სულსწრაფი შეთავაზებები</h2>
-      <div class="carousel-container">
-        <button class="carousel-nav prev">&lt;</button>
-        <div class="product-carousel">
-          <!-- Product Card Template -->
-          <!-- <div class="product-card">
-            <img src="product1.jpg" alt="Product Image" class="product-image" />
-            <h4 class="product-price">4699 ₾</h4>
-            <p class="product-installment">თვეში: <span>130 ₾</span> -დან</p>
-            <a href="#" class="product-link"
-              >Apple iPhone 16 Pro Max e-SIM Only | 256GB Black Titanium</a
-            >
-            <div class="product-actions">
-              <button class="compare-btn">შედარება</button>
-              <button class="add-cart-btn">დამატება</button>
-            </div>
-          </div> -->
-          <!-- Add more .product-card elements as needed -->
+    <div class="sections-container">
+      <div class="product-section">
+        <h2 class="section-title">სულსწრაფი შეთავაზებები</h2>
+        <div class="carousel-container">
+          <button class="carousel-nav prev">
+            <img src="icons/arrow-left.svg" alt="arrow-left" />
+          </button>
+          <div class="product-carousel eager">
+            <!-- Product Card Template -->
+          </div>
+          <button class="carousel-nav next">
+            <img src="icons/arrow-right.svg" alt="arrow-right" />
+          </button>
         </div>
-        <button class="carousel-nav next">&gt;</button>
       </div>
+
+      <div class="product-section">
+        <h2 class="section-title">აღმოაჩინე რა საჩუქარი გელოდება</h2>
+        <div class="carousel-container">
+          <button class="carousel-nav prev">
+            <img src="icons/arrow-left.svg" alt="arrow-left" />
+          </button>
+          <div class="product-carousel discover">
+            <!-- Product Card Template -->
+          </div>
+          <button class="carousel-nav next">
+            <img src="icons/arrow-right.svg" alt="arrow-right" />
+          </button>
+        </div>
+      </div>
+      <script src="script.js"></script>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
