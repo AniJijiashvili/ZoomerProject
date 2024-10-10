@@ -13,13 +13,19 @@ body {
 }
 
 .sections-container {
-  width: 1200px;
-  margin: 13px auto 0;
+  max-width: 1170px;
+  margin: 13px auto 0 auto;
   padding: 0px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
+/* .product-section {
+  width: 1200px;
+  margin: 13px auto 0;
+  padding: 0px;
+} */
 
 .section-title {
   height: 20px;
@@ -40,14 +46,14 @@ body {
 .product-carousel {
   display: flex;
   overflow-x: auto;
-  gap: 40px;
+  gap: 35px;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+  scrollbar-width: none; /* Firefox */
   background-color: #fff;
 }
 
 .product-carousel::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome, Safari */
 }
 
 .product-card {
@@ -59,16 +65,20 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* border: 1px solid #ddd; */
+  /* border-radius: 8px; */
+  /* text-align: center; */
   background-color: #fff;
   scroll-snap-align: start;
   cursor: pointer;
 }
 
-.best-price-label {
+.product-text-label {
+  /* .best-price-label { */
   position: absolute;
-  top: 51%;
-  left: 0px;
-  transform: translateY(-50%);
+  top: 51%; /* Vertically center */
+  left: 0px; /* Adjust this as needed for horizontal positioning */
+  transform: translateY(-50%); /* Center it vertically */
   background-color: #f79009;
   color: white;
   font-size: 9px;
@@ -77,9 +87,27 @@ body {
   font-weight: bold;
 }
 
+.gifts-label-icon {
+  position: absolute;
+  top: 5%; /* Vertically upper */
+  left: 0px; /* Adjust this as needed for horizontal positioning */
+  transform: translateY(-50%); /* Center it vertically */
+  background-color: #f79009;
+  width: 26px;
+  height: 26px;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+.gifts-label-icon img {
+  width: 16px;
+  height: 16px;
+}
+
 .product-image {
   width: 160px;
   height: 160px;
+  /* border-radius: 8px; */
 }
 .product-card--info {
   width: 160px;
@@ -109,8 +137,8 @@ body {
   left: 0;
   right: 0;
   top: 50%;
-  height: 1px;
-  background-color: #ec5e2a;
+  height: 1px; /* This controls the thickness */
+  background-color: #ec5e2a; /* The color of the line */
   transform: translateY(-50%);
 }
 
@@ -189,17 +217,18 @@ body {
 }
 
 .carousel-nav {
+  z-index: 100;
   position: absolute;
   background: none;
   border: none;
   font-size: 24px;
   cursor: pointer;
-  top: 50%;
+  top: 49%;
   transform: translateY(-50%);
   background: white;
   border: none;
   border-radius: 50%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 50px;
   height: 50px;
   display: flex;
@@ -207,11 +236,11 @@ body {
   justify-content: center;
 }
 .carousel-nav.prev {
-  left: 20px;
+  left: 8px;
 }
 
 .carousel-nav.next {
-  right: 20px;
+  right: 8px;
 }
 
 .carousel-nav img {
