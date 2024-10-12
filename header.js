@@ -145,3 +145,111 @@ let handleOpenCart = () => {
     console.error("Failed to open cart:", error);
   }
 };
+
+// search bar
+async function searchData() {
+  try {
+    const response = await fetch("./products.json");
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const searchDataAll = await response.json();
+    return searchDataAll;
+  } catch (err) {
+    console.error("Error fetching search data:", err);
+  }
+}
+
+searchData();
+
+async function displaySearchValue() {
+  const searchInput = document.getElementById("search_input");
+  const data = await searchData();
+
+  // Create search result container
+
+  searchInput.addEventListener("keyup", async () => {
+    const searchValue = searchInput.value.toLowerCase();
+    const inputForm = document.getElementById("search_conteiner");
+    const searchResult = document.createElement("div");
+    searchResult.classList.add("search_result");
+    searchResult.id = "search_result"; // Assign an ID for later reference
+
+    const searchResultTitle = document.createElement("div");
+    searchResultTitle.classList.add("search_result--title");
+
+    const filterCategory = document.createElement("div");
+    filterCategory.textContent = "გაფილტრე კატეგორია";
+
+    const categoryAnchor = document.createElement("a");
+    categoryAnchor.href = "./navigation.html";
+
+    const allCategory = document.createElement("div");
+    allCategory.textContent = "ყველას ნახვა";
+    allCategory.classList.add("category");
+
+    // Append elements
+    categoryAnchor.appendChild(allCategory);
+    searchResultTitle.appendChild(filterCategory);
+    searchResultTitle.appendChild(categoryAnchor);
+    searchResult.appendChild(searchResultTitle);
+    inputForm.appendChild(searchResult);
+
+    document.addEventListener("click", (event) => {
+      if (
+        searchResult &&
+        !inputForm.contains(event.target) &&
+        event.target !== searchInput
+      ) {
+        searchResult.remove();
+      }
+    });
+
+    const results = []; // Array to hold matched results
+
+    for (const key in data) {
+      data[key].forEach((item) => {
+        if (item.name.toLowerCase().includes(searchValue)) {
+          results.push(item); // Collect matched items
+        }
+      });
+    }
+
+    if (results.length > 0) {
+      results.forEach((item) => {
+        const resultDetails = document.createElement("div");
+        resultDetails.classList.add("search_result--details");
+
+        const resultDetailsContainer = document.createElement("div");
+        resultDetailsContainer.classList.add("search_details--container");
+
+        const resultImg = document.createElement("img");
+        resultImg.classList.add("result_img");
+        resultImg.src = item.imageUrl; // Use the correct image URL
+
+        const resultDetailsContent = document.createElement("div");
+        resultDetailsContent.classList.add("search_details--content");
+
+        const resultDetailsTitle = document.createElement("div");
+        resultDetailsTitle.classList.add("search_details--title");
+        resultDetailsTitle.textContent = item.name; // Use the correct name
+
+        const resultDetailsPrice = document.createElement("div");
+        resultDetailsPrice.classList.add("search_details--price");
+        resultDetailsPrice.textContent = `${item.price}  ₾`; // Use the correct price
+
+        resultDetailsContent.appendChild(resultDetailsTitle);
+        resultDetailsContent.appendChild(resultDetailsPrice);
+        resultDetailsContainer.appendChild(resultImg);
+        resultDetailsContainer.appendChild(resultDetailsContent);
+        resultDetails.appendChild(resultDetailsContainer);
+        searchResult.appendChild(resultDetails);
+
+        if (searchValue == "") {
+          resultDetails.innerHTML = "";
+        }
+      });
+    }
+  });
+}

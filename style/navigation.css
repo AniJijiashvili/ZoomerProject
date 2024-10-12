@@ -22,7 +22,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Creates 20 equal columns */
+  grid-template-columns: repeat(4, 1fr);
   margin-bottom: 40px;
 }
 
