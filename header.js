@@ -36,6 +36,7 @@ let handlePopupOpen = async () => {
   overlay.style.display = "flex";
   document.body.style.overflow = "hidden";
   handleDropdownCountries();
+  handlePopupContent();
 };
 
 let handlePopupClose = async () => {
@@ -64,6 +65,7 @@ async function fetchData() {
   }
 }
 
+// display Language========
 async function displayLanguageCountry() {
   const uk = document.getElementById("uk");
   const geo = document.getElementById("geo");
@@ -82,7 +84,9 @@ async function displayLanguageCountry() {
   });
 }
 
-// display county data
+// display county data in popups
+
+async function handlePopupContent() {}
 
 async function handleDropdownCountries() {
   const countriesList = document.getElementById("country_list");
@@ -123,7 +127,7 @@ async function handleDropdownCountries() {
   });
 }
 
-// display county option container
+// display county option in container
 
 function displayCountryOptions() {
   countyContainer.classList.toggle("active");
@@ -131,7 +135,6 @@ function displayCountryOptions() {
 
 // change language =========
 
-// display language option container
 function handleChangeLaguage() {
   languageOptions.classList.toggle("active");
 }
@@ -146,7 +149,9 @@ let handleOpenCart = () => {
   }
 };
 
-// search bar
+// search bar=====
+
+// fetch data for searchBar
 async function searchData() {
   try {
     const response = await fetch("./products.json");
@@ -161,9 +166,9 @@ async function searchData() {
   }
 }
 
-searchData();
-
 async function displaySearchValue() {
+  searchData();
+
   const searchInput = document.getElementById("search_input");
   const data = await searchData();
 
@@ -174,7 +179,7 @@ async function displaySearchValue() {
     const inputForm = document.getElementById("search_conteiner");
     const searchResult = document.createElement("div");
     searchResult.classList.add("search_result");
-    searchResult.id = "search_result"; // Assign an ID for later reference
+    // searchResult.id = "search_result"; // Assign an ID for later reference
 
     const searchResultTitle = document.createElement("div");
     searchResultTitle.classList.add("search_result--title");

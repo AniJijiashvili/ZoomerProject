@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style/reset.css" />
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="./style/header.css" />
-    <link rel="stylesheet" href="./style/navigation_search.css" />
+    <link rel="stylesheet" href="./style/searchBar.css" />
     <link rel="stylesheet" href="./style/popup.css" />
   </head>
   <body>
@@ -47,26 +47,24 @@
               onclick="displaySearchValue()"
             />
 
-            <!-- <div lass="search_result--overlay">
-              <div class="search_result">
-                <div class="search_result--title">
-                  <div>გაფილტრე კატეგორია</div>
-                  <a href="./navigation.html">
-                    <div class="category">ყველას ნახვა</div></a
-                  >
-                </div>
+            <!-- <div class="search_result">
+              <div class="search_result--title">
+                <div>გაფილტრე კატეგორია</div>
+                <a href="./navigation.html">
+                  <div class="category">ყველას ნახვა</div></a
+                >
+              </div>
 
-                <div class="search_result--details">
-                  <div class="search_details--container">
-                    <img
-                      src="./assets/header/flag-geo.png"
-                      alt=""
-                      class="search_details--img"
-                    />
-                    <div class="search_details--content">
-                      <div class="search_details--title">gerogia</div>
-                      <div class="search_details--price">1000</div>
-                    </div>
+              <div class="search_result--details">
+                <div class="search_details--container">
+                  <img
+                    src="./assets/header/flag-geo.png"
+                    alt=""
+                    class="search_details--img"
+                  />
+                  <div class="search_details--content">
+                    <div class="search_details--title">gerogia</div>
+                    <div class="search_details--price">1000</div>
                   </div>
                 </div>
               </div>
@@ -191,12 +189,10 @@
             </div>
 
             <div class="number_input-field">
-              <input
-                id="number_input"
-                type="text"
-                placeholder="ტელეფონის ნომერი"
-              />
+              <input id="number_input" type="text" placeholder=" " />
+              <label for="">ტელეფონის ნომერი</label>
             </div>
+
             <button id="popup_btn" class="popup_button" type="submit">
               კოდის გაგზავნა
             </button>

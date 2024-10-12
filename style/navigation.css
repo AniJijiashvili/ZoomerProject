@@ -1,5 +1,6 @@
 .navigation_section {
   width: 100%;
+  height: fit-content;
   margin-top: 60px;
 }
 

@@ -1,5 +1,4 @@
 body {
-  height: 2000px;
   position: relative;
 }
 
@@ -95,7 +94,7 @@ header.active {
 }
 
 /* search result */
-
+/* 
 .search_result--overlay {
   position: fixed;
   top: 110px;
@@ -105,10 +104,9 @@ header.active {
   overflow: hidden;
   background: rgb(0, 0, 0);
   opacity: 0.6;
-  z-index: 12;
+  z-index: 99999999;
   transition: 0.2s;
-  width: 100vw;
-}
+} */
 
 .search_result {
   position: fixed;
@@ -147,6 +145,7 @@ header.active {
   overflow-y: scroll;
   gap: 10px;
   padding: 0px 10px 15px;
+  margin: 10px 0;
 }
 
 .search_details--container {

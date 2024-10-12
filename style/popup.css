@@ -220,6 +220,12 @@
   font-size: 12px;
 }
 
+#deal_index {
+  font-weight: 500;
+  color: var(--black-06);
+  font-size: 0.813rem;
+}
+
 .number_input-field {
   background: var(--white-400);
   position: relative;
@@ -248,6 +254,37 @@
   line-height: 1;
   flex-shrink: 0;
   font-weight: 500;
+  transition: 0.175s ease-out;
+  font-size: 14px;
+}
+
+#number_input:focus + label {
+  transform: translateY(-1.5rem);
+  pointer-events: none;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 15px;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  align-items: center;
+  transition: 0.175s ease-out;
+  pointer-events: none;
+  max-width: calc(100% - 1.25rem);
+  display: block;
+  color: var(--black-06);
+  padding-left: 16px;
+  padding-right: 0.7rem;
 }
 
 #popup_btn {
