@@ -10,6 +10,12 @@
 }
 
 /* General Styles */
+.category-sliders{
+  max-width: 1200px;
+  margin:auto !important;
+  z-index: 9;
+
+}
 .sections-container {
   display: flex;
   flex-direction: column;
