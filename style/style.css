@@ -56,7 +56,7 @@
 }
 /* @font-face {
   font-family: "Segoe UI";
-  src: url("./fonts/segoe-ui-this/segoeuithis.ttf");
+  src: url("../fonts/segoe-ui-this/segoeuithisi.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -100,22 +100,465 @@
   font-family: "Helvetica Neue";
   src: url("fonts/helvetica-neue-5/HelveticaNeueBlack.otf");
   font-weight: normal;
+
   font-style: normal; */
 /* } */
+
+@font-face {
+  font-family: Firago;
+  src: url("../fonts/Firago/FiraGO-Book.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: Firago;
+}
+/* ::-webkit-scrollbar{
+  width:4px;
+  height:4px;
+  border-radius: 12px;
+}
+::-webkit-scrollbar-track{
+  border-radius: 12px;
+  width:12px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--orange-05);
+  border-radius: 12px;
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: red;
+  border: 2px solid rgba(255, 0, 0, 0.5);
+} */
+
+
 body,
 html {
-  min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     "sans-serif";
+}
+.product-categories {
+  max-width: 1200px;
+  margin: 100px auto 0px auto;
+  width: 100%;
+  padding: 0px 15px;
+}
+.product-categories__featured {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.product-categories__featured__items {
+  min-height: 372px;
+  background: var(--white-main);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 10px;
+  border-radius: 12px;
+  display: flex;
+}
+
+.product-categories__featured--item:hover {
+  background-color: rgba(237, 235, 235, 0.74);
+  animation: auto ease 0s 1 normal none running none;
+  backdrop-filter: blur(10px);
+}
+.product-categories__featured__items__container {
+  min-width: 246px;
+  background: var(--white-main);
+  z-index: 3;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-categories__featured--item--link {
+  color: inherit;
+  text-decoration: none;
+}
+.product-categories__featured--item__content {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  cursor: pointer;
+  padding: 11.5px 10px 11.5px 15px;
+}
+.product-categories__featured--item__content__logo {
+  width: 23px;
+  height: 23px;
+  color: transparent;
+}
+.product-categories__featured--item__content__text {
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--black-08);
+  opacity: 0.8;
+  cursor: pointer;
+  font-family: "Firago";
+}
+.product-categories__featured--item__content__line {
+  background: var(--white-400);
+  height: 1px;
+  margin-top: -1px;
+  margin-left: 10px;
+  width: calc(100% - 20px);
+}
+.product-categories__featured__items__details {
+  position: relative;
+  width: 100%;
+  display: none;
+}
+/*  */
+.product-categories__featured__items__details--mobiles__content {
+  gap: 30px;
+  padding: 20px 90px 0px 20px;
+  border-left: 1px solid rgb(219, 216, 216);
+  display: none;
+  width: 100%;
+}
+.product-categories__featured__items__details--mobiles h3 {
+  font-family: Firago;
+  font-weight: 500;
+  font-size: 16;
+  line-height: 19px;
+  color: var(--black-main);
+  margin-bottom: 15px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.product-categories__featured__items__details--mobiles p {
+  font-family: Firago;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--black-08);
+  cursor: pointer;
+  opacity: 0.8;
+}
+.product-categories__featured__items__details--mobiles--mobilebrands {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-categories__featured__items__details--mobiles--smartwatch {
+  margin-bottom: 30px;
+}
+.product-categories__featured__items__details--mobiles--photo img {
+  width: 200px;
+  align-self: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.product-categories__featured__items__details--mobiles--mobileaccessories {
+  display: flex;
+  flex-direction: column;
+}
+.product-categories__featured__items__details--mobiles--mobileaccessories--text {
+  width: 200px !important;
+}
+.product-categories__featured__items__details--tabs {
+  gap: 30px;
+  padding: 20px 90px 0px 20px;
+  border-left: 1px solid rgb(219, 216, 216);
+  display: none;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.product-categories__featured__items__details--tabs--photo img {
+  width: 200px;
+  align-self: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.product-categories__featured__items__details--tabs--tabs a {
+  margin: 0 !important;
+}
+
+.product-categories__featured__items__details--computers {
+  gap: 30px;
+  padding: 20px 90px 0px 20px;
+  border-left: 1px solid rgb(219, 216, 216);
+  display: none;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.product-categories__featured__items__details--computers--photo img {
+  width: 200px;
+  align-self: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.product-categories__featured__items__details--computers__brands__type,
+.product-categories__featured__items__details--computers__memory__accessories,
+.product-categories__featured__items__details--computers__office__projector__headphones {
+  display: flex;
+  flex-direction: column;
+  gap: 20px !important;
+}
+.product-categories__featured__items__details--computers--headphones {
+  margin-bottom: 20px;
+}
+
+.product-categories__featured__items__details--gadgets,
+.product-categories__featured__items__details--brands,
+.product-categories__featured__items__details--gaming,
+.product-categories__featured__items__details--tv,
+.product-categories__featured__items__details--photo {
+  gap: 30px;
+  padding: 20px 90px 0px 20px;
+  border-left: 1px solid rgb(219, 216, 216);
+  display: none;
+  width: 100% !important;
+  height: 100% !important;
+}
+.product-categories__featured__items__details--gadgets--photo img {
+  width: 200px;
+  align-self: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.product-categories__featured__items__details--brands--photo img {
+  width: 200px;
+  align-self: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.product-categories__featured__items__details--gaming--photo img {
+  width: 200px;
+  align-self: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.product-categories__featured__items__details--tv--photo img {
+  width: 200px;
+  align-self: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.product-categories__featured__items__details--photo--mainphoto img {
+  width: 200px;
+  align-self: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.product-categories__featured__items__details--gadgets__reception__face__kitchen,
+.product-categories__featured__items__details--gadgets__head__monitoring__moving,
+.product-categories__featured__items__details--gadgets__outdoor__sport__animals,
+.product-categories__featured__items__details--gadgets__light__tools,
+.product-categories__featured__items__details--brands__categories__headphones,
+.product-categories__featured__items__details--brands__audio__microphone,
+.product-categories__featured__items__details--gaming__playstation__xbox,
+.product-categories__featured__items__details--gaming__nintendo__console,
+.product-categories__featured__items__details--tv__tv__all,
+.product-categories__featured__items__details--tv__monitor__audio,
+.product-categories__featured__items__details--photo__photo__optic,
+.product-categories__featured__items__details--photo__drone__camera,
+.product-categories__featured__items__details--photo__printer__video,
+.product-categories__featured__items__details--tabs__graphictabs__smartkeybord,
+.product-categories__featured__items__details--tabs__accessories__book,
+.product-categories__featured__items__details--tabs__cables__headphones {
+  display: flex;
+  flex-direction: column;
+  gap: 40px !important;
+}
+
+.swiper {
+  max-width: 900px;
+  height: 100% !important;
+  z-index: 1000;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: white;
+  border-radius: 50%;
+  padding: 25px;
+  position: absolute;
+  color: rgb(66, 64, 64) !important ;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 10px;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 17px !important;
+}
+.mySwiper2 {
+  display: none !important;
+}
+.product-categories__featured__items__details {
+  display: none;
+}
+.coverPhotoforMedia {
+  display: none;
 }
 @media screen and (max-width: 1440px) {
 }
 @media screen and (max-width: 1280px) {
 }
 @media screen and (max-width: 1024px) {
+  .coverPhotoforMedia {
+    display: block;
+  }
+  .product-categories__featured__items__details img {
+    display: none !important;
+  }
+  .mySwiper {
+    display: none !important;
+  }
+  /* .mySwiper2{
+    display: block !important;
+  } */
+  .product-categories__featured {
+    grid-template-columns: 1fr;
+  }
+  .product-categories__featured__items__details--mobiles {
+    width: 100%;
+  }
+
+  .swiper-slide2 {
+    width: 350px !important;
+    height: 180px !important;
+  }
+  .product-categories {
+    padding: 0px 15px 0px 0px;
+  }
+
+  .product-categories__featured--item__content {
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    background: rgba(242, 242, 242, 0.3);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    border-left: 0;
+  }
+
+  .product-categories__featured--item {
+    max-width: 100px;
+    width: 100%;
+    background-color: var(--white-400);
+  }
+  .product-categories__featured__items__container {
+    min-width: 100px;
+    gap: 2px;
+  }
+  .product-categories__featured--item__content__line {
+    display: none;
+  }
+  [class^="product-categories__featured__items__details--"] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brandwrap {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  [class^="product-categories__featured__items__details--"] p {
+    position: relative;
+    background: var(--white-400);
+    border-radius: 8px;
+    padding: 8px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  /* .product-categories__featured__items__details--mobiles__mobileaccessories__mobileaccessories--text__photo {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+  } */
+  .product-categories__featured__items__details--gadgets,
+  .product-categories__featured__items__details--brands,
+  .product-categories__featured__items__details--gaming,
+  .product-categories__featured__items__details--tv,
+  .product-categories__featured__items__details--photo,
+  .product-categories__featured__items__details--mobiles__content,
+  .product-categories__featured__items__details--tabs,
+  .product-categories__featured__items__details--computers {
+    padding-right: 10px;
+  }
 }
 @media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 480px) {
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 4px;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--orange-05);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-07);
+  padding: 20px;
+}
+
+.scroll--above {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+  transition: transform 0.2s;
+  background: var(--white-400);
+  text-align: center;
+
+}
+.scroll--above img{
+  text-align: center;
+  margin-top: 10px;
+
+}
+.scroll--above:hover {
+  background-color: #888;
 }

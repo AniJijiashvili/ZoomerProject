@@ -1,0 +1,133 @@
+@font-face {
+    font-family: Firago;
+    src: url("../fonts/Firago/FiraGO-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+  }
+* {
+    font-family: Firago;
+}
+.trade{
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto 60px auto;
+    padding: 0px 15px;
+}
+.trade__title{
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f2f2f2;
+}
+.trade__title__head{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--black-main);
+}
+.trade__content--title{
+    text-align: center;
+    font-weight: 700;
+    font-family: Firago;
+    line-height: 1.38;
+    font-size: 21px;
+
+}
+.trade__content--secondtitle{
+    color:rgb(10, 50, 81);
+    margin-top: 20px;
+    font-family: Firago;
+    font-weight: 600;
+    line-height: 1.2;
+    
+
+}
+.trade__content--text{
+    line-height: 1.1;
+    font-family: Firago;
+    color:rgb(72, 74, 75);
+
+
+}
+.trade__content--title--modified{
+    text-align: start;
+    font-weight: 700;
+    font-family: Firago;
+
+}
+td{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+.rules-order{
+    margin-top: 20px;
+}
+.personal{
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto 60px auto;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+.personal_title{
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f2f2f2;
+}
+.personal__content{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+.personal__title__head{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--black-main);
+}
+.personal__content--title{
+    margin-top: 0in;
+    margin-right: 28.35pt;
+    margin-bottom: 0in;
+    margin-left: 3.0in;
+    margin-bottom: .0001pt;
+    text-align: right;
+    font-size: 10.0pt;
+
+}
+.personal__content--secondtitle{
+    font-size: 11.0pt;
+    font-family: "Sylfaen", serif;
+    text-align: start;
+    font-size: 18px;
+    margin-top: 15px;
+}
+.personal__content__body{
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+}
+.personal__content--title--secondtitile{
+    font-size: 11.0pt;
+    font-family: "Sylfaen", serif;
+    text-align: center;
+}
+.personal__content__body__textcontainer{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.personal__content__body__textcontainer--part{
+    font-size: 11.0pt;
+    font-family: "Sylfaen", serif;
+    line-height: 1.38;
+}
+.personal__content__body--sign{
+    display: flex;
+    gap:120px 
+}
+.personal__content__body__textcontainer--part--site{
+    color:blue;
+}
