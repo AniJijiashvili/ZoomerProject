@@ -19,9 +19,13 @@
             <p>*7007 / +995 (32) 2 60 30 60</p>
           </div>
           <ul class="nav__list">
-            <li class="nav__list--item"><a href="">სავაჭრო პოლიტიკა</a></li>
-            <li class="nav__list--item"><a href="">განვადება</a></li>
-            <li class="nav__list--item"><a href="">კარიერა</a></li>
+            <li class="nav__list--item">
+              <a href="./trade.html">სავაჭრო პოლიტიკა</a>
+            </li>
+            <li class="nav__list--item">
+              <a href="./installment.html">განვადება</a>
+            </li>
+            <li class="nav__list--item"><a href="./">კარიერა</a></li>
             <li class="nav__list--item"><a href="">Trade In</a></li>
             <li class="nav__list--item"><a href="">ფილიალები</a></li>
             <li class="nav__list--item"><a href="">ყველა აქცია</a></li>
@@ -46,29 +50,6 @@
               placeholder="ძიება"
               onclick="displaySearchValue()"
             />
-
-            <!-- <div class="search_result">
-              <div class="search_result--title">
-                <div>გაფილტრე კატეგორია</div>
-                <a href="./navigation.html">
-                  <div class="category">ყველას ნახვა</div></a
-                >
-              </div>
-
-              <div class="search_result--details">
-                <div class="search_details--container">
-                  <img
-                    src="./assets/header/flag-geo.png"
-                    alt=""
-                    class="search_details--img"
-                  />
-                  <div class="search_details--content">
-                    <div class="search_details--title">gerogia</div>
-                    <div class="search_details--price">1000</div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </form>
 
           <div
@@ -143,12 +124,16 @@
 
         <div class="popup_title--container">
           <div class="popup_title-box">
-            <h4 class="popup_title">ავტორიზაცია</h4>
+            <h4 class="popup_title" onclick="handleAutorization()">
+              ავტორიზაცია
+            </h4>
           </div>
           <div class="popup_title-box">
-            <h4 class="popup_title">რეგისტრაცია</h4>
+            <h4 class="popup_title" onclick="handleRegistration()">
+              რეგისტრაცია
+            </h4>
           </div>
-          <div class="red_before"></div>
+          <div id="red_before"></div>
 
           <img
             onclick="handlePopupClose()"
@@ -158,9 +143,9 @@
           />
         </div>
 
-        <div class="popup_main--content">
+        <div id="popup_main--content">
           <!-- authorization -->
-          <div class="authorization_container">
+          <div id="authorization_container">
             <div class="authorization_box active">
               <h4 class="authorization_title active">ნომრით ავტორიზაცია</h4>
             </div>
@@ -178,13 +163,14 @@
                 alt="georgian flag"
               />
               <h4 id="deal_index">+ 995</h4>
+            </div>
 
-              <div id="country_list--container">
-                <div class="search_county--container">
-                  <input type="text" placeholder="ძებნა" id="search_county" />
-                </div>
-                <ul id="country_list"></ul>
+            <div id="country_list--container">
+              <div class="search_county--container">
+                <input type="text" placeholder="ძებნა" id="search_county" />
               </div>
+              <ul id="country_list"></ul>
+
               <!-- ==== -->
             </div>
 
@@ -196,9 +182,12 @@
             <button id="popup_btn" class="popup_button" type="submit">
               კოდის გაგზავნა
             </button>
+
+            <!-- google -->
           </div>
 
-          <!-- google -->
+          <div id="radio_rules--container" onclick="handleTickRules()"></div>
+
           <div class="google_btn--container">
             <h4>ან გაიარე ავტორიზაცია სხვა მეთოდით</h4>
             <a target="_blank" href="https://www.google.com/">

@@ -1,7 +1,12 @@
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const loadComponent = (url, id) => {
     fetch(url)
-      .then((response) => response.text())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.text();
+      })
       .then((details) => {
         document.getElementById(id).innerHTML = details;
         if (id === "header") {

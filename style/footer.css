@@ -10,7 +10,6 @@ footer {
 }
 
 .footer_content--container {
-  position: relative;
   padding: 20px 0px;
   display: flex;
   gap: 120px;

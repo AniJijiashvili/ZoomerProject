@@ -13,15 +13,17 @@
 }
 
 #overlay {
-  width: 100%;
-  height: 100%;
   position: fixed;
   top: 0px;
   left: 0px;
+  width: 100%;
+  height: 100%;
   background-color: var(--black-06);
   z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow-y: auto;
-  display: none;
 }
 
 #popup_container {
@@ -67,7 +69,7 @@
   border-bottom: 2px solid var(--white-400);
 }
 
-.red_before {
+#red_before {
   position: absolute;
   width: 50%;
   height: 2px;
@@ -93,7 +95,7 @@
   text-align: center;
 }
 
-.authorization_container {
+#authorization_container {
   display: flex;
   gap: 5px;
 }
@@ -125,10 +127,12 @@
   opacity: 1;
 }
 
-.popup_main--content {
+#popup_main--content {
   display: flex;
   flex-direction: column;
-  padding: 15px 0;
+  gap: 28px;
+  overflow: hidden;
+  padding: 20px 0;
 }
 
 .number_input--container {
@@ -139,7 +143,9 @@
   column-gap: 11px;
   margin-bottom: 0px;
   transition: 0.3s;
-  margin-top: 30px;
+}
+
+.number_input--container {
 }
 
 /* country search */
@@ -154,13 +160,13 @@
   z-index: 1;
   list-style: none;
   position: absolute;
-  padding: 0;
+  padding: 5px 10px;
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.35);
   background-color: #fff;
   width: 300px;
   max-height: 200px;
   overflow-y: scroll;
-  border-radius: 3px;
+  border-radius: 10px;
   top: 65px;
   left: 0px;
 }
@@ -185,6 +191,11 @@
   align-items: center;
   padding: 5px 10px;
   gap: 10px;
+  cursor: pointer;
+}
+
+.country_list--item:hover {
+  background-color: #ecf4fd;
 }
 
 .county_flag {
@@ -224,6 +235,7 @@
   font-weight: 500;
   color: var(--black-06);
   font-size: 0.813rem;
+  white-space: nowrap;
 }
 
 .number_input-field {
@@ -236,6 +248,7 @@
   margin: 0px;
   transition: 0.3s;
   text-align: center;
+  padding: 20px;
 }
 
 #number_input {
@@ -287,8 +300,18 @@ label {
   padding-right: 0.7rem;
 }
 
+#radio_rules--container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#radio_btn {
+  cursor: pointer;
+}
+
 #popup_btn {
-  margin: 30px 0;
+  margin-top: 20px;
 }
 
 .popup_button {
