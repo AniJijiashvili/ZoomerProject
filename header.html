@@ -1,12 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="header__details"></div>
-    <div class="header__controls"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoomer.ge</title>
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="./style/header.css" />
+    <link rel="stylesheet" href="./style/searchBar.css" />
+    <link rel="stylesheet" href="./style/popup.css" />
+  </head>
+  <body>
+    <header>
+      <div id="header__details">
+        <div class="header__details--content">
+          <div class="phone__details">
+            <img src="./assets/header/header-phone.svg" alt="phone icon" />
+            <p>*7007 / +995 (32) 2 60 30 60</p>
+          </div>
+          <ul class="nav__list">
+            <li class="nav__list--item">
+              <a href="./trade.html">სავაჭრო პოლიტიკა</a>
+            </li>
+            <li class="nav__list--item">
+              <a href="./installment.html">განვადება</a>
+            </li>
+            <li class="nav__list--item"><a href="./">კარიერა</a></li>
+            <li class="nav__list--item"><a href="">Trade In</a></li>
+            <li class="nav__list--item"><a href="">ფილიალები</a></li>
+            <li class="nav__list--item"><a href="">ყველა აქცია</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="header__controls">
+        <a href="index.html">
+          <img class="logo" src="./assets/header/main-logo.svg" alt="logo" />
+        </a>
+        <div class="header__controls--content">
+          <div class="navigation_btn">
+            <img src="./assets/header/dots (1).svg" alt="dots" />
+            <a href="./navigation.html"> <h4>ნავიგაცია</h4></a>
+          </div>
+
+          <form action="" id="search_conteiner">
+            <img src="./assets/header/main-search.svg" alt="search-logo" />
+            <input
+              id="search_input"
+              type="text"
+              placeholder="ძიება"
+              onclick="displaySearchValue()"
+            />
+          </form>
+
+          <div
+            class="cart_containeer"
+            id="open_cart"
+            onclick="handleOpenCart()"
+          >
+            <img src="./assets/header/header-cart.svg" alt="cart-icon" />
+            <h4>კალათა</h4>
+          </div>
+
+          <div class="cart_containeer" onclick="handlePopupOpen()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              alt=""
+            >
+              <path
+                stroke="#000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M12.12 12.78a1 1 0 0 0-.24 0 3.27 3.27 0 0 1-3.16-3.27c0-1.81 1.46-3.28 3.28-3.28a3.276 3.276 0 0 1 .12 6.55M18.74 19.38A9.93 9.93 0 0 1 12 22c-2.6 0-4.96-.99-6.74-2.62.1-.94.7-1.86 1.77-2.58 2.74-1.82 7.22-1.82 9.94 0 1.07.72 1.67 1.64 1.77 2.58"
+              ></path>
+              <path
+                stroke="#000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10"
+              ></path>
+            </svg>
+            <h4>შესვლა</h4>
+          </div>
+          <div id="laguage" onclick="handleChangeLaguage()">
+            <div class="laguage_selected">
+              <img
+                id="flag"
+                src="./assets/header/flag-geo.png"
+                alt="georian-fleg"
+              />
+            </div>
+            <div id="laguage_option">
+              <div
+                class="laguage_option--county"
+                id="geo"
+                onclick="displayLanguageCountry()"
+              >
+                GEO
+              </div>
+              <div
+                class="laguage_option--county"
+                id="uk"
+                onclick="displayLanguageCountry()"
+              >
+                ENG
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- popup  -->
+    <div id="popup">
+      <div id="overlay"></div>
+      <div id="popup_container">
+        <!-- popup main titles -->
+
+        <div class="popup_title--container">
+          <div class="popup_title-box">
+            <h4 class="popup_title" onclick="handleAutorization()">
+              ავტორიზაცია
+            </h4>
+          </div>
+          <div class="popup_title-box">
+            <h4 class="popup_title" onclick="handleRegistration()">
+              რეგისტრაცია
+            </h4>
+          </div>
+          <div id="red_before"></div>
+
+          <img
+            onclick="handlePopupClose()"
+            id="close_tbn"
+            src="./assets/header/mobile-modal-close.svg"
+            alt="close-tbn"
+          />
+        </div>
+
+        <div id="popup_main--content">
+          <!-- authorization -->
+          <div id="authorization_container">
+            <div class="authorization_box active">
+              <h4 class="authorization_title active">ნომრით ავტორიზაცია</h4>
+            </div>
+            <div class="authorization_box">
+              <h4 class="authorization_title">მეილით ავტორიზაცია</h4>
+            </div>
+          </div>
+
+          <!-- number -->
+          <div class="number_input--container">
+            <div class="number_input--index" onclick="displayCountryOptions()">
+              <img
+                id="selected_flag"
+                src="./assets/header/flag-geo.png"
+                alt="georgian flag"
+              />
+              <h4 id="deal_index">+ 995</h4>
+            </div>
+
+            <div id="country_list--container">
+              <div class="search_county--container">
+                <input type="text" placeholder="ძებნა" id="search_county" />
+              </div>
+              <ul id="country_list"></ul>
+
+              <!-- ==== -->
+            </div>
+
+            <div class="number_input-field">
+              <input id="number_input" type="text" placeholder=" " />
+              <label for="">ტელეფონის ნომერი</label>
+            </div>
+
+            <button id="popup_btn" class="popup_button" type="submit">
+              კოდის გაგზავნა
+            </button>
+
+            <!-- google -->
+          </div>
+
+          <div id="radio_rules--container" onclick="handleTickRules()"></div>
+
+          <div class="google_btn--container">
+            <h4>ან გაიარე ავტორიზაცია სხვა მეთოდით</h4>
+            <a target="_blank" href="https://www.google.com/">
+              <button class="popup_button google_btn">
+                <img
+                  src="./assets/header/google-icon.png"
+                  alt="google-icon"
+                /></button
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./header.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

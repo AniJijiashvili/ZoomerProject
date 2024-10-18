@@ -1,4 +1,6 @@
 :root {
+  --bg-color: rgba(237, 235, 235, 0.74);
+  --swiper-theme-color: #007aff;
   --orange-main: #ec5e2a;
   --orange-primary: #f28f6a;
   --orange-second: #f6af95;
@@ -48,7 +50,11 @@
   --product-branch-white-400: #f2f2f2;
   --product-floatBar-oldPrice-black: #fff;
 }
-@font-face {
+
+.hidden {
+  display: none;
+}
+/* @font-face {
   font-family: "Segoe UI";
   src: url("../fonts/segoe-ui-this/segoeuithisi.ttf");
   font-weight: normal;
@@ -94,8 +100,10 @@
   font-family: "Helvetica Neue";
   src: url("fonts/helvetica-neue-5/HelveticaNeueBlack.otf");
   font-weight: normal;
-  font-style: normal;
-}
+
+  font-style: normal; */
+/* } */
+
 @font-face {
   font-family: Firago;
   src: url("../fonts/Firago/FiraGO-Book.otf");
@@ -124,6 +132,7 @@
   background-color: red;
   border: 2px solid rgba(255, 0, 0, 0.5);
 } */
+
 
 body,
 html {
