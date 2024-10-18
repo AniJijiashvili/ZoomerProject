@@ -1,0 +1,109 @@
+@font-face {
+    font-family: Firago;
+    src: url("../fonts/Firago/FiraGO-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  .installment__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 60px auto;
+    padding: 0px 20px;
+  }
+  .installment__container__title {
+    /* margin: 7px 0px 10px 0px; */
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f2f2f2;
+  
+  }
+  .installment__container__head {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--black-main);
+    font-size: 20px;
+  }
+  .installment__container__content--heading {
+    text-align: center;
+    font-size: 21px;
+    margin: 35px 0px 80px 0px;
+    font-weight: 600;
+  
+    font-family: Firago;
+  }
+  .installment__container__content--secondtitle {
+    padding: 40px 0px 10px 0px;
+  }
+  .installment__container__content--secondtitle--name {
+    line-height: 1.38;
+    margin-top: 11px;
+    margin-bottom: 2px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .installment__container__content--text--details{
+      line-height: 1.38;
+      
+      margin:12px 0px;
+      font-family: Arial, sans-serif;
+      color: rgb(0, 0, 0);
+      background-color: transparent;
+      font-variant-numeric: normal;
+      font-variant-east-asian: normal;
+      font-variant-alternates: normal;
+      font-variant-position: normal;
+      vertical-align: baseline;
+      
+  }
+  .installment__container__content--text--details--step{
+      font-size: 11pt;
+      font-family: Arial, sans-serif;
+      color: rgb(0, 0, 0);
+      background-color: transparent;
+      font-weight: 700;
+      font-variant-numeric: normal;
+      font-variant-east-asian: normal;
+      font-variant-alternates: normal;
+      font-variant-position: normal;
+      vertical-align: baseline;
+      /* white-space-collapse: preserve; */
+  }
+  .installment__container__content--text--photo{
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      margin: 12px 0px;
+  }
+  .installment__container__content--text--photo img{
+      max-width: 403px;
+   
+  }
+  .installment__container__content--text--details--list{
+      margin-bottom: 0px;
+      padding-inline-start: 48px;
+  }
+  .installment__container__content--text--details--list--item{
+      list-style-type: disc;
+      /* font-size: 11pt; */
+      font-family: Arial, sans-serif;
+      color: rgb(0, 0, 0);
+      background-color: transparent;
+      font-variant-numeric: normal;
+      font-variant-east-asian: normal;
+      font-variant-alternates: normal;
+      font-variant-position: normal;
+      vertical-align: baseline;
+      /* white-space: pre; */
+      line-height: 1.38;
+  
+  }
+  .zoommerwebsite{
+    margin-bottom: 50px;
+  }
+
+  .installment__container__content--text--details-payment{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+  }

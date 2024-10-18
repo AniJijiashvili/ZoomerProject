@@ -1,0 +1,150 @@
+@font-face {
+    font-family: Firago;
+    src: url("../fonts/Firago/FiraGO-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+  }
+* {
+    font-family: Firago;
+}
+.career{
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto 60px auto;
+    padding: 0px 15px;
+}
+.carrer__title{
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f2f2f2;
+}
+.carrer__title__head{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--black-main);
+}
+.carrer__content--title{
+    text-align: center;
+    font-weight: 700;
+    font-family: Firago;
+    font-size: 12pt;
+    line-height: 17.12px;
+
+}
+.carrer__content--secondtitle{
+    font-size: 14pt;
+    font-family: Calibri, sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    font-weight: 700;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-variant-alternates: normal;
+    font-variant-position: normal;
+    vertical-align: baseline;
+    /* white-space-collapse: preserve; */
+
+}
+.carrer__content__main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+.carrer__content__main--text{
+    width: 100%;
+}
+.carrer__content__main--photo--img{
+    max-width:233px;
+    float:right;
+}
+.carrer__content__main--text--info{
+    font-size: 11pt;
+    font-family: Calibri, sans-serif;
+    color: #000000;
+    background-color: transparent;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-decoration: none;
+    vertical-align: baseline;
+    white-space: pre;
+    white-space: pre-wrap;
+    line-height: 1.295;
+    margin-top: 0pt;
+    margin-bottom: 8px;
+
+}
+.carrer__content__body{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    
+}
+.carrer__content__main--text--link{
+    color:rgb(0, 0, 255);
+    text-decoration: underline;
+
+}
+.carrer__content__questions__container--title{
+    font-size: 11pt;
+    font-family: Calibri, sans-serif;
+    color: #000000;
+    background-color: transparent;
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal;
+    text-decoration: none;
+    vertical-align: baseline;
+    white-space: pre;
+    white-space: pre-wrap;
+
+
+}
+.carrer__content__questions__container--text{
+    line-height: 1.295;
+    margin-top: 0pt;
+    margin-bottom: 8pt;  
+    font-size: 11pt;
+    font-family: Calibri, sans-serif;
+    color: #000000;
+    background-color: transparent;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-decoration: none;
+    vertical-align: baseline;
+    /* white-space: pre; */
+    /* white-space: pre-wrap; */
+}
+.carrer__content__questions__container--text--bold{
+    font-size: 11pt;
+    font-family: Calibri, sans-serif;
+    color: #000000;
+    background-color: transparent;
+    font-weight: 700;
+    font-style: italic;
+    font-variant: normal;
+    text-decoration: none;
+    vertical-align: baseline;
+    white-space: pre;
+    white-space: pre-wrap;
+}
+.carrer__content__questions__container{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.carrer__content__questions__container--title{
+    margin-top: 50px;
+}
+.carrer__content__questions__container--text--list{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-inline-start: 48px;
+}
+
+.carrer__content__questions__container--text--listitem{
+    list-style-type: disc;
+}

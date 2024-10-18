@@ -5,7 +5,6 @@ let hoverSection = document.getElementsByClassName(
 let hoverContainer = document.getElementsByClassName(
   "product-categories__featured__items__details"
 );
-
 let popupMobileSection = document.getElementsByClassName(
   "product-categories__featured__items__details--mobiles"
 );
@@ -50,6 +49,24 @@ document.addEventListener("DOMContentLoaded", () => {
   loadComponent("header.html", "header");
   loadComponent("footer.html", "footer");
 });
+// ბანერების შევსება
+fetch("baners.json")
+  .then((response) => response.json())
+  .then((baners) => {
+    let banersPhoto = document.getElementsByClassName("baners__photo");
+    let banersPhotoMobile = document.getElementsByClassName(
+      "baners__photo--mobile"
+    );
+
+    for (let i = 0; i < banersPhoto.length && i < baners.length; i++) {
+      banersPhoto[i].src = baners[i].webImageUrl;
+      banersPhoto[i].alt = baners[i].title;
+
+      banersPhotoMobile[i].src = baners[i].mobileImageUrl;
+      banersPhotoMobile[i].alt = baners[i].title;
+    }
+  })
+  .catch((error) => console.error("Error fetching banners:", error));
 
 //მონაცემების გამოტანა
 fetch("data.json")
@@ -215,35 +232,6 @@ fetch("data.json")
   })
   .catch((error) => console.error("Error loading JSON:", error));
 
-// გამოტანილი ინფორმაციით დივების შევსება
-// function fillProductCategories(title, brands, className) {
-//   const categoryDiv = document.getElementsByClassName(className);
-//   if (categoryDiv.length > 0) {
-//     const titleWrap = document.createElement("div")
-//     titleWrap.classList.add('titleWrap');
-//     const titleLink = document.createElement("a");
-//     titleLink.href = "#";
-//     const sectionTitle = document.createElement("h3");
-//     sectionTitle.textContent = title;
-//     titleLink.appendChild(sectionTitle);
-//     titleWrap.appendChild(titleLink)
-//     categoryDiv[0].appendChild(titleWrap);
-//     const brandWrap = document.createElement("div")
-//     brandWrap.classList.add('brandwrap');
-
-//     brands.forEach((brand) => {
-//       // const brandWrap = document.createElement("div")
-//       const brandLink = document.createElement("a");
-//       brandLink.href = "#";
-//       const sectionItems = document.createElement("p");
-//       sectionItems.textContent = brand;
-//       brandLink.appendChild(sectionItems);
-//       brandWrap.appendChild(brandLink)
-//       // categoryDiv[0].appendChild(brandWrap);
-//     });
-//     categoryDiv[0].appendChild(brandWrap);
-//   }
-// }
 function fillProductCategories(title, brands, className, images) {
   const categoryDiv = document.getElementsByClassName(className);
   if (categoryDiv.length > 0) {
@@ -273,16 +261,15 @@ function fillProductCategories(title, brands, className, images) {
       if (images[index]) {
         sectionItems.style.position = "relative"; // Ensure positioning is relative for absolute children
         const background = document.createElement("span");
-        background.classList.add("coverPhotoforMedia")
+        background.classList.add("coverPhotoforMedia");
         background.style.backgroundImage = `url(${images[index]})`;
         background.style.position = "absolute";
         background.style.height = "100%";
         background.style.width = "100%";
         background.style.inset = "0px";
-
         sectionItems.appendChild(background);
         sectionItems.style.position = "relative"; // Keep <p> relative for absolute background
-        sectionItems.style.padding = "10px"; // Add padding for better appearance
+        sectionItems.style.padding = "5px"; // Add padding for better appearance
         background.style.backgroundSize = "cover";
         background.style.backgroundPosition = "center";
       }
@@ -324,7 +311,6 @@ const handleMouseOver = (
   hoverContainer[0].style.display = "block";
 };
 
-
 const handleMouseLeave = (popup, defaultDisplay) => {
   if (popup.matches(":hover")) {
     setDisplay(popup, "flex");
@@ -332,13 +318,15 @@ const handleMouseLeave = (popup, defaultDisplay) => {
   } else if (window.innerWidth <= 1024) {
     setDisplay(popup, "flex");
     setDisplay(mainSectionSwiper[0], defaultDisplay);
-    hoverContainer[0].style.display = "flex";
+    // handleMouseOver(popupMobileSection[0],"flex","none","none","none","none","none","none","none")
+    // hoverContainer[0].style.display = "block";
   } else {
     setDisplay(popup, "none");
     setDisplay(mainSectionSwiper[0], defaultDisplay);
     hoverContainer[0].style.display = "none";
   }
 };
+///
 
 // hoverSection[0] for mobile
 hoverSection[0].addEventListener("mouseover", () =>
@@ -497,8 +485,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Add border to the clicked element
       const sectionLine = event.currentTarget; // Get the clicked element
-      hoverSection[0].style.borderLeft = "0",
-      sectionLine.style.borderLeft = "4px solid var(--orange-main)"; // Set border
+      (hoverSection[0].style.borderLeft = "0"),
+        (sectionLine.style.borderLeft = "2px solid var(--orange-main)"); // Set border
     }
   }
 
@@ -517,10 +505,9 @@ function addEventListeners() {
   const isMobile = window.matchMedia("(max-width: 1024px)").matches;
 
   const handleEvent = (index) => {
-    
     if (isMobile) {
       handleMouseLeave(mobileContainer[0], "block"),
-      hoverSection[0].style.borderLeft = "4px solid var(--orange-main)"; 
+        (hoverSection[0].style.borderLeft = "2px solid var(--orange-main)");
       hoverSection[index].addEventListener("click", () =>
         handleMouseOver(
           popupMobileSection[0],
@@ -552,3 +539,51 @@ function addEventListeners() {
 // Call the function on page load and resize
 addEventListeners();
 window.addEventListener("resize", addEventListeners);
+
+// Assuming you have this click handler function
+const handleClick = () => {
+  // Your logic here
+  handleMouseOver(
+    popupMobileSection[0],
+    "flex", // Show the mobile container
+    "none", // Hide other sections
+    "none",
+    "none",
+    "none",
+    "none",
+    "none"
+  );
+};
+
+// Automatically call this function on page load
+if (window.matchMedia("(max-width: 1024px)").matches) {
+  handleClick(); // Call the function without a click
+}
+
+// Add click listener for hoverSection[0]
+hoverSection[0].addEventListener("click", handleClick);
+
+// Handle window resize to reopen if necessary
+window.addEventListener("resize", () => {
+  if (window.matchMedia("(max-width: 1024px)").matches) {
+    handleClick(); // Call the function again without a click
+  }
+});
+
+
+
+const scrollToTopButton = document.getElementById('scrollToTop');
+
+// Show button when scrolling down
+window.onscroll = () => {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopButton.style.display = 'block';
+    } else {
+        scrollToTopButton.style.display = 'none';
+    }
+};
+
+// Scroll to top on click
+scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});

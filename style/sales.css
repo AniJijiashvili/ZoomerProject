@@ -1,0 +1,46 @@
+@font-face {
+    font-family: Firago;
+    src: url("../fonts/Firago/FiraGO-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  * {
+    font-family: Firago;
+  }
+  .sales {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto 60px auto;
+    padding: 0px 15px;
+  }
+  .sales__title {
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f2f2f2;
+  }
+  .sales__title__head {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--black-main);
+  }
+  .sales__content--title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--black-main);
+  }
+  .sales__content--photo{
+    width: 100%;
+    border-radius: 12px;
+  }
+  .sales__content{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+  }
+  .sales__content__container{
+    display: flex;
+    flex-direction: column;
+    gap:60px;
+  }

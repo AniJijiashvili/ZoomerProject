@@ -1,0 +1,74 @@
+@font-face {
+    font-family: Firago;
+    src: url("../fonts/Firago/FiraGO-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+  }
+* {
+    font-family: Firago;
+}
+.personal{
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto 60px auto;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+.personal_title{
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f2f2f2;
+}
+.personal__content{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+.personal__title__head{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--black-main);
+}
+.personal__content--title{
+    margin-top: 0in;
+    margin-right: 28.35pt;
+    margin-bottom: 0in;
+    margin-left: 3.0in;
+    margin-bottom: .0001pt;
+    text-align: right;
+    font-size: 10.0pt;
+
+}
+.personal__content--secondtitle{
+    font-size: 11.0pt;
+    font-family: "Sylfaen", serif;
+    font-weight: bold;
+    text-align: center;
+}
+.personal__content__body{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+.personal__content--title--secondtitile{
+    font-size: 11.0pt;
+    font-family: "Sylfaen", serif;
+    text-align: center;
+}
+.personal__content__body__textcontainer{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.personal__content__body__textcontainer--part{
+    font-size: 11.0pt;
+    font-family: "Sylfaen", serif;
+    line-height: 1.38;
+}
+.personal__content__body--sign{
+    display: flex;
+    gap:120px 
+}

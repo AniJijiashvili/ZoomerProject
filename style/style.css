@@ -105,6 +105,25 @@
 * {
   font-family: Firago;
 }
+/* ::-webkit-scrollbar{
+  width:4px;
+  height:4px;
+  border-radius: 12px;
+}
+::-webkit-scrollbar-track{
+  border-radius: 12px;
+  width:12px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--orange-05);
+  border-radius: 12px;
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: red;
+  border: 2px solid rgba(255, 0, 0, 0.5);
+} */
 
 body,
 html {
@@ -238,7 +257,6 @@ html {
   height: 100% !important;
 }
 
-
 .product-categories__featured__items__details--tabs--photo img {
   width: 200px;
   align-self: flex-end;
@@ -326,8 +344,6 @@ html {
   bottom: 0;
 }
 
-
-
 .product-categories__featured__items__details--gadgets__reception__face__kitchen,
 .product-categories__featured__items__details--gadgets__head__monitoring__moving,
 .product-categories__featured__items__details--gadgets__outdoor__sport__animals,
@@ -389,7 +405,7 @@ html {
   display: none !important;
 }
 .product-categories__featured__items__details {
-  display: none; 
+  display: none;
 }
 .coverPhotoforMedia {
   display: none;
@@ -412,9 +428,9 @@ html {
     display: block !important;
   } */
   .product-categories__featured {
-   grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
-  .product-categories__featured__items__details--mobiles{
+  .product-categories__featured__items__details--mobiles {
     width: 100%;
   }
 
@@ -456,10 +472,11 @@ html {
     display: flex;
     flex-direction: column;
   }
+
   .brandwrap {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr);
-    gap:10px;
+    gap: 10px;
   }
   [class^="product-categories__featured__items__details--"] p {
     position: relative;
@@ -472,10 +489,10 @@ html {
     justify-content: space-between;
     align-items: flex-start;
   }
-  .product-categories__featured__items__details--mobiles__mobileaccessories__mobileaccessories--text__photo {
+  /* .product-categories__featured__items__details--mobiles__mobileaccessories__mobileaccessories--text__photo {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr);
-  }
+  } */
   .product-categories__featured__items__details--gadgets,
   .product-categories__featured__items__details--brands,
   .product-categories__featured__items__details--gaming,
@@ -490,4 +507,49 @@ html {
 @media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 480px) {
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 4px;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--orange-05);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-07);
+  padding: 20px;
+}
+
+.scroll--above {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+  transition: transform 0.2s;
+  background: var(--white-400);
+  text-align: center;
+
+}
+.scroll--above img{
+  text-align: center;
+  margin-top: 10px;
+
+}
+.scroll--above:hover {
+  background-color: #888;
 }
