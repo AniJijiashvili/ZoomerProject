@@ -10,11 +10,10 @@
 }
 
 /* General Styles */
-.category-sliders{
+.category-sliders {
   max-width: 1200px;
-  margin:auto !important;
+  margin: auto !important;
   z-index: 9;
-
 }
 .sections-container {
   display: flex;
@@ -194,7 +193,7 @@
 }
 
 /* Media Queries */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .category-sliders {
     padding: 0px 20px;
   }
