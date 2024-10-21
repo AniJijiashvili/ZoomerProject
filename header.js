@@ -16,9 +16,7 @@ const autorizationContainer = document.getElementById(
   "authorization_container"
 );
 
-// ==========================================
 
-// handle header scroll==========
 window.addEventListener("scroll", () => {
   const headerBar = document.querySelector("header");
   const navigation = document.getElementById("header__details");
@@ -32,7 +30,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Open/close popup =============
+
 function handlePopupOpen() {
   popupContainer.classList.add("open");
   popupContainerBox.classList.add("active");
@@ -42,7 +40,7 @@ function handlePopupOpen() {
     handlePopupClose();
   });
   handleDropdownCountries();
-  handlePopupContent();
+  // handlePopupContent();
 }
 
 function handlePopupClose() {
@@ -53,7 +51,6 @@ function handlePopupClose() {
   overlay.style.display = "none";
 }
 
-// // handleAutorization
 
 function handleAutorization() {
   redBottom.style.left = "0px";
@@ -64,7 +61,6 @@ function handleAutorization() {
   radioButton.style.display = "none";
 }
 
-// // registration field
 
 function handleRegistration() {
   const radioButton = document.getElementById("radio_rules--container");
@@ -85,7 +81,7 @@ function handleRegistration() {
 </p>`;
 }
 
-// radio button cklicked
+
 let clicked = false;
 
 function handleTickRules() {
@@ -98,9 +94,7 @@ function handleTickRules() {
   }
 }
 
-// Countries in popup============
 
-// fetch Country data
 
 async function fetchData() {
   const url = "https://restcountries.com/v3.1/all";
@@ -116,7 +110,6 @@ async function fetchData() {
   }
 }
 
-// display Language========
 async function displayLanguageCountry() {
   const selectedLanguageFlag = document.getElementById("flag");
   const uk = document.getElementById("uk");
@@ -137,7 +130,6 @@ async function displayLanguageCountry() {
   });
 }
 
-// dropdown Country ============================
 async function handleDropdownCountries() {
   const countriesList = document.getElementById("country_list");
   const flag = document.getElementById("selected_flag");
@@ -147,7 +139,6 @@ async function handleDropdownCountries() {
 
   let countryData = await fetchData();
 
-  // Create an array to store country options
   const countryOptions = countryData.map((newCountryData) => {
     let countryOption = document.createElement("li");
     countryOption.classList.add("country_list--item");
@@ -166,12 +157,10 @@ async function handleDropdownCountries() {
     countryPhone.textContent =
       newCountryData.idd.root + newCountryData.idd.suffixes;
 
-    // Append the elements
     countryOption.appendChild(flags);
     countryOption.appendChild(countryName);
     countryOption.appendChild(countryPhone);
 
-    //  select country
     countryOption.addEventListener("click", () => {
       flag.src = newCountryData.flags.png;
       selectedCounty.textContent = countryPhone.textContent;
@@ -185,7 +174,6 @@ async function handleDropdownCountries() {
     return { countryOption, countryName };
   });
 
-  // search input value
   searchValue.addEventListener("keyup", () => {
     const searchTerm = searchValue.value.toLowerCase();
 
@@ -199,19 +187,16 @@ async function handleDropdownCountries() {
   });
 }
 
-// display county option in container
 
 function displayCountryOptions() {
   countyContainer.classList.toggle("active");
 }
 
-// change language =========
 
 function handleChangeLaguage() {
   languageOptions.classList.toggle("active");
 }
 
-// empty cart ==========
 
 let handleOpenCart = () => {
   try {
@@ -221,9 +206,7 @@ let handleOpenCart = () => {
   }
 };
 
-// search bar================================
 
-// fetch data for searchBar
 async function searchData() {
   try {
     const response = await fetch("./products.json");
@@ -244,14 +227,12 @@ async function displaySearchValue() {
   const searchInput = document.getElementById("search_input");
   const data = await searchData();
 
-  // Create search result container
 
   searchInput.addEventListener("keyup", async () => {
     const searchValue = searchInput.value.toLowerCase();
     const inputForm = document.getElementById("search_conteiner");
     const searchResult = document.createElement("div");
     searchResult.classList.add("search_result");
-    // searchResult.id = "search_result"; // Assign an ID for later reference
 
     const searchResultTitle = document.createElement("div");
     searchResultTitle.classList.add("search_result--title");
@@ -266,7 +247,6 @@ async function displaySearchValue() {
     allCategory.textContent = "ყველას ნახვა";
     allCategory.classList.add("category");
 
-    // Append elements
     categoryAnchor.appendChild(allCategory);
     searchResultTitle.appendChild(filterCategory);
     searchResultTitle.appendChild(categoryAnchor);

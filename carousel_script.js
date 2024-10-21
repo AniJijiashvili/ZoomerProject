@@ -171,7 +171,8 @@ carouselTypes.forEach((carouselType) => {
             `;
           // Add click event listener to redirect to product.route
           productCard.addEventListener("click", () => {
-            seenProducts.push(product);
+            // seenProducts.push(product);
+            seenProducts.unshift(product);
             console.log(seenProducts);
             // Re-render seen products section
             renderSeenProducts();
