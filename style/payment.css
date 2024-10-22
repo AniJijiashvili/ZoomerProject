@@ -91,3 +91,12 @@
       line-height: 1.38;
   
   }
+
+  @media screen and (max-width: 700px) {
+    .payment__container__content--text--details--step{
+      line-height: 1.2;
+    }
+    .payment__container__content--text--details--list--item{
+      text-align: start;
+    }
+  }

@@ -53,12 +53,18 @@
   font-variant: normal;
   text-decoration: none;
   vertical-align: baseline;
-  /* white-space: pre; */
-  /* white-space: pre-wrap; */
+
 }
 .tradein__content__body {
   display: flex;
   flex-direction: column;
   gap: 40px;
   margin-top: 40px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .tradein__content--secondtitle{
+    font-size: 14px;
+  }
 }

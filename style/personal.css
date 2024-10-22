@@ -72,3 +72,20 @@
     display: flex;
     gap:120px 
 }
+@media screen and (max-width: 700px) {
+    .personal__content--title{
+        text-align: left;
+        margin: 0;
+        max-width: 200px;
+    }
+    .personal__content--secondtitle{
+        line-height: 1.2;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .personal__content__body--sign {
+        gap:50px
+    }
+}

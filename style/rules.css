@@ -131,3 +131,12 @@ td{
 .personal__content__body__textcontainer--part--site{
     color:blue;
 }
+
+@media screen and (max-width: 700px) {
+    .trade__content--title{
+        font-size: 15px;
+    }
+    .trade__content--title{
+        line-height: 1.1;
+    }
+}
