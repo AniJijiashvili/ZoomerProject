@@ -1,4 +1,5 @@
 footer {
+  margin-top: 50px;
   background-color: var(--white-400);
 }
 
@@ -13,6 +14,7 @@ footer {
   padding: 20px 0px;
   display: flex;
   gap: 120px;
+  position: relative;
 }
 
 .footer_content--section {
