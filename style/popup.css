@@ -1,13 +1,21 @@
 /* popup=============================== */
+
+.main_popup {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
 #popup {
   display: none;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
-  z-index: 999;
+  z-index: 99900;
 }
+
 #popup.active {
   display: flex;
 }
@@ -16,10 +24,10 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: var(--black-06);
-  z-index: 999;
+  z-index: 99900;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,10 +114,7 @@
   border-radius: 30px;
   background: var(--white-400);
   text-align: center;
-  border: 1px solid var(--white-main);
-}
-
-.authorization_title {
+  /* border: 1px solid var(--white-main); */
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -120,9 +125,6 @@
 .authorization_box.active {
   border: 1px solid var(--orange-main);
   background: var(--orange-02);
-}
-
-.authorization_title.active {
   color: var(--black-main);
   opacity: 1;
 }
@@ -135,7 +137,7 @@
   padding: 20px 0;
 }
 
-.number_input--container {
+#number_input--container {
   display: flex;
   position: relative;
   display: grid;
@@ -143,9 +145,6 @@
   column-gap: 11px;
   margin-bottom: 0px;
   transition: 0.3s;
-}
-
-.number_input--container {
 }
 
 /* country search */
@@ -207,7 +206,7 @@
   font-size: 15px;
 }
 
-.number_input--index {
+#number_input--index {
   display: flex;
   text-align: center;
   align-items: center;
@@ -222,12 +221,12 @@
   cursor: pointer;
 }
 
-.number_input--index img {
+#number_input--index img {
   width: 16px;
   height: 11px;
 }
 
-.number_input--index h4 {
+#number_input--index h4 {
   font-size: 12px;
 }
 
@@ -245,13 +244,13 @@
   height: 50px;
   min-height: 50px;
   border-radius: 12px;
-  margin: 0px;
+  margin-bottom: 10px;
   transition: 0.3s;
   text-align: center;
   padding: 20px;
 }
 
-#number_input {
+.popup_input {
   border: none;
   outline: none;
   width: calc(100% - 16px);
@@ -271,7 +270,7 @@
   font-size: 14px;
 }
 
-#number_input:focus + label {
+.popup_input:focus + label {
   transform: translateY(-1.5rem);
   pointer-events: none;
   letter-spacing: 0;
@@ -298,6 +297,13 @@ label {
   color: var(--black-06);
   padding-left: 16px;
   padding-right: 0.7rem;
+}
+
+#password_hide {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  cursor: pointer;
 }
 
 #radio_rules--container {
@@ -350,4 +356,28 @@ label {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+
+/* =============  mail_autorization*/
+
+.mail_inpits--container {
+  display: flex;
+  flex-direction: column;
+}
+
+.mail_input {
+  background: var(--white-400);
+  position: relative;
+  box-sizing: border-box;
+  height: 50px;
+  min-height: 50px;
+  border-radius: 12px;
+  margin: 0px;
+  transition: 0.3s;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

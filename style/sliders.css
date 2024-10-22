@@ -10,11 +10,10 @@
 }
 
 /* General Styles */
-.category-sliders{
+.category-sliders {
   max-width: 1200px;
-  margin:auto !important;
+  margin: auto !important;
   z-index: 9;
-
 }
 .sections-container {
   display: flex;
