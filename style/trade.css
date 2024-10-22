@@ -1,51 +1,55 @@
 @font-face {
-    font-family: Firago;
-    src: url("../fonts/Firago/FiraGO-Regular.otf");
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: Firago;
+  src: url("../fonts/Firago/FiraGO-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
-    font-family: Firago;
+  font-family: Firago;
 }
-.trade{
-    width: 100%;
-    max-width: 1200px;
-    margin: 30px auto 60px auto;
-    padding: 0px 15px;
+.trade {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto 60px auto;
+  padding: 0px 15px;
 }
-.trade__title{
-    padding-bottom: 24px;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #f2f2f2;
+.trade__title {
+  padding-bottom: 24px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f2f2f2;
 }
-.trade__title__head{
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--black-main);
+.trade__title__head {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black-main);
 }
-.trade__content--title{
-    text-align: center;
-    font-weight: 700;
-    font-family: Firago;
+.trade__content--title {
+  text-align: center;
+  font-weight: 700;
+  font-family: Firago;
+}
+.trade__content--secondtitle {
+  color: rgb(103, 106, 108);
+  margin-top: 20px;
+  font-family: Firago;
+}
+.trade__content--text {
+  line-height: 1.1;
+  font-family: Firago;
+  color: rgb(72, 74, 75);
+}
+.trade__content--title--modified {
+  text-align: start;
+  font-weight: 700;
+  font-family: Firago;
+}
 
-}
-.trade__content--secondtitle{
-    color:rgb(103, 106, 108);
-    margin-top: 20px;
-    font-family: Firago;
-
-}
-.trade__content--text{
-    line-height: 1.1;
-    font-family: Firago;
-    color:rgb(72, 74, 75);
-
-
-}
-.trade__content--title--modified{
-    text-align: start;
-    font-weight: 700;
-    font-family: Firago;
-
+@media screen and (max-width: 768px) {
+  .trade__content--secondtitle {
+    line-height: 1.2;
+  }
+  .trade__content--title--modified {
+    line-height: 1.2;
+  }
 }

@@ -107,3 +107,12 @@
     flex-direction: column;
     gap:30px;
   }
+
+  @media screen and (max-width: 700px) {
+    .installment__container__content--heading{
+      line-height: 1.3;
+    }
+    .installment__container__content--text--photo img{
+      max-width: 300px;
+    }
+  }

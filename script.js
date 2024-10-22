@@ -35,7 +35,6 @@ let popupPhotoSection = document.getElementsByClassName(
 );
 let mySwiper2 = document.getElementsByClassName("mySwiper2");
 
-//ჰედერის და ფუტერის შემოტანა
 document.addEventListener("DOMContentLoaded", () => {
   const loadComponent = (url, id) => {
     fetch(url)
@@ -64,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
   loadComponent("header.html", "header");
   loadComponent("footer.html", "footer");
 });
-// ბანერების შევსება
 fetch("baners.json")
   .then((response) => response.json())
   .then((baners) => {
@@ -83,7 +81,6 @@ fetch("baners.json")
   })
   .catch((error) => console.error("Error fetching banners:", error));
 
-//მონაცემების გამოტანა
 fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
@@ -242,6 +239,7 @@ fetch("data.json")
     imageClasses.forEach((cls, index) => {
       let image = document.createElement("img");
       image.src = data[index].imageUrl;
+      image.alt = "photo";
       document.getElementsByClassName(cls)[0].appendChild(image);
     });
   })
@@ -272,9 +270,8 @@ function fillProductCategories(title, brands, className, images) {
       const sectionItems = document.createElement("p");
       sectionItems.textContent = brand;
 
-      // Set the background image for the <p> tag
       if (images[index]) {
-        sectionItems.style.position = "relative"; // Ensure positioning is relative for absolute children
+        sectionItems.style.position = "relative";
         const background = document.createElement("span");
         background.classList.add("coverPhotoforMedia");
         background.style.backgroundImage = `url(${images[index]})`;
@@ -283,8 +280,8 @@ function fillProductCategories(title, brands, className, images) {
         background.style.width = "100%";
         background.style.inset = "0px";
         sectionItems.appendChild(background);
-        sectionItems.style.position = "relative"; // Keep <p> relative for absolute background
-        sectionItems.style.padding = "5px"; // Add padding for better appearance
+        sectionItems.style.position = "relative";
+        sectionItems.style.padding = "5px";
         background.style.backgroundSize = "cover";
         background.style.backgroundPosition = "center";
       }
@@ -297,7 +294,6 @@ function fillProductCategories(title, brands, className, images) {
   }
 }
 
-// ჰოვერის ეფექტზე ინფორმაციის გამოჩენა/გაქრობა
 const setDisplay = (element, display) => {
   element.style.display = display;
 };
@@ -322,14 +318,14 @@ const handleMouseOver = (
   setDisplay(popupTvSection[0], tvDisplay);
   setDisplay(popupPhotoSection[0], photoDisplay);
   setDisplay(popupMobileSection[0], "flex");
-  setDisplay(mainSectionSwiper[0], "none");
+  // setDisplay(mainSectionSwiper[0], "none");
   hoverContainer[0].style.display = "block";
 };
 
 const handleMouseLeave = (popup, defaultDisplay) => {
   if (popup.matches(":hover")) {
     setDisplay(popup, "flex");
-    setDisplay(mainSectionSwiper[0], "none");
+    // setDisplay(mainSectionSwiper[0], "none");
   } else if (window.innerWidth <= 1024) {
     setDisplay(popup, "flex");
     setDisplay(mainSectionSwiper[0], defaultDisplay);
@@ -341,9 +337,7 @@ const handleMouseLeave = (popup, defaultDisplay) => {
     hoverContainer[0].style.display = "none";
   }
 };
-///
 
-// hoverSection[0] for mobile
 hoverSection[0].addEventListener("mouseover", () =>
   handleMouseOver(popupMobileSection[0], "flex", "none", "none")
 );
@@ -354,7 +348,7 @@ popupMobileSection[0].addEventListener("mouseleave", () =>
   handleMouseLeave(popupMobileSection[0], "block")
 );
 
-// hoverSection[1] for tabs
+//  for tabs
 hoverSection[1].addEventListener("mouseover", () =>
   handleMouseOver(popupMobileSection[0], "none", "flex", "none")
 );
@@ -362,7 +356,7 @@ hoverSection[1].addEventListener("mouseleave", () =>
   handleMouseLeave(popupTabsSection[0], "block")
 );
 
-// hoverSection[2] for computers
+// for computers
 hoverSection[2].addEventListener("mouseover", () =>
   handleMouseOver(popupMobileSection[0], "none", "none", "flex")
 );
@@ -373,7 +367,7 @@ popupComputerSection[0].addEventListener("mouseleave", () =>
   handleMouseLeave(popupComputerSection[0], "block")
 );
 
-// hoverSection[3] for gadgets
+//  for gadgets
 hoverSection[3].addEventListener("mouseover", () =>
   handleMouseOver(popupMobileSection[0], "none", "none", "none", "flex")
 );
@@ -384,7 +378,7 @@ popupGadgetsSection[0].addEventListener("mouseleave", () =>
   handleMouseLeave(popupGadgetsSection[0], "block")
 );
 
-// hoverSection[4] for brands
+// for brands
 hoverSection[4].addEventListener("mouseover", () =>
   handleMouseOver(popupMobileSection[0], "none", "none", "none", "none", "flex")
 );
@@ -395,7 +389,7 @@ popupBrandsSection[0].addEventListener("mouseleave", () =>
   handleMouseLeave(popupBrandsSection[0], "block")
 );
 
-// hoverSection[5] for gaming
+//  for gaming
 hoverSection[5].addEventListener("mouseover", () =>
   handleMouseOver(
     popupMobileSection[0],
@@ -414,7 +408,7 @@ popupGamingSection[0].addEventListener("mouseleave", () =>
   handleMouseLeave(popupGamingSection[0], "block")
 );
 
-// hoverSection[6] for tv
+//  for tv
 hoverSection[6].addEventListener("mouseover", () =>
   handleMouseOver(
     popupMobileSection[0],
@@ -434,7 +428,7 @@ popupTvSection[0].addEventListener("mouseleave", () =>
   handleMouseLeave(popupTvSection[0], "block")
 );
 
-// hoverSection[7] for photo
+//  for photo
 hoverSection[7].addEventListener("mouseover", () =>
   handleMouseOver(
     popupMobileSection[0],
@@ -489,30 +483,25 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   function toggleBorder(event) {
-    event.preventDefault(); // Prevent the default action of the link
+    event.preventDefault();
 
-    // Check if the viewport width is 1024px or less
     if (window.matchMedia("(max-width: 1024px)").matches) {
-      // Remove border from all sections
       for (let sectionLine of sectionLines) {
-        sectionLine.style.borderLeft = "0"; // Reset all borders
+        sectionLine.style.borderLeft = "0";
       }
 
-      // Add border to the clicked element
-      const sectionLine = event.currentTarget; // Get the clicked element
+      const sectionLine = event.currentTarget;
       (hoverSection[0].style.borderLeft = "0"),
-        (sectionLine.style.borderLeft = "2px solid var(--orange-main)"); // Set border
+        (sectionLine.style.borderLeft = "2px solid var(--orange-main)");
     }
   }
 
-  // Attach click event listener to each element
   for (let sectionLine of sectionLines) {
     sectionLine.addEventListener("click", toggleBorder);
   }
 });
 
 function addEventListeners() {
-  // Remove existing listeners
   Array.from(hoverSection).forEach((section) => {
     section.replaceWith(section.cloneNode(true));
   });
@@ -551,17 +540,14 @@ function addEventListeners() {
   }
 }
 
-// Call the function on page load and resize
 addEventListeners();
 window.addEventListener("resize", addEventListeners);
 
-// Assuming you have this click handler function
 const handleClick = () => {
-  // Your logic here
   handleMouseOver(
     popupMobileSection[0],
-    "flex", // Show the mobile container
-    "none", // Hide other sections
+    "flex",
+    "none",
     "none",
     "none",
     "none",
@@ -570,35 +556,52 @@ const handleClick = () => {
   );
 };
 
-// Automatically call this function on page load
 if (window.matchMedia("(max-width: 1024px)").matches) {
-  handleClick(); // Call the function without a click
+  handleClick();
 }
 
-// Add click listener for hoverSection[0]
 hoverSection[0].addEventListener("click", handleClick);
 
-// Handle window resize to reopen if necessary
 window.addEventListener("resize", () => {
   if (window.matchMedia("(max-width: 1024px)").matches) {
-    handleClick(); // Call the function again without a click
+    handleClick();
   }
 });
 
+window.addEventListener("resize", () => {
+  const sectionLines = document.getElementsByClassName(
+    "product-categories__featured--item__content"
+  );
 
-
-const scrollToTopButton = document.getElementById('scrollToTop');
-
-// Show button when scrolling down
-window.onscroll = () => {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        scrollToTopButton.style.display = 'block';
-    } else {
-        scrollToTopButton.style.display = 'none';
+  if (window.matchMedia("(min-width: 1024px)").matches) {
+    for (let sectionLine of sectionLines) {
+      sectionLine.style.borderLeft = "0";
     }
+    hoverSection[0].style.borderLeft = "0";
+  }
+});
+
+const scrollToTopButton = document.getElementById("scrollToTop");
+
+window.onscroll = () => {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    scrollToTopButton.style.display = "block";
+  } else {
+    scrollToTopButton.style.display = "none";
+  }
 };
 
-// Scroll to top on click
-scrollToTopButton.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+scrollToTopButton.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+document.addEventListener("mousemove", function (e) {
+  let ele = document.getElementById("scrollbar");
+  let distance = ele.offsetLeft + ele.offsetWidth - e.pageX;
+  distance < 15 && distance > -15
+    ? ele.classList.add("more-width")
+    : ele.classList.remove("more-width");
 });
