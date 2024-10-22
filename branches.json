@@ -1,0 +1,1325 @@
+[
+  {
+    "id": 2,
+    "name": "ზუმერის საბითუმო საწყობი",
+    "address": "წერეთელი",
+    "phone": "+995 (32) 2 60 30 60",
+    "workingHours": [
+      {
+        "id": 8,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 9,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 10,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 11,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 12,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 13,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 14,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      }
+    ],
+    "city": "თბილისი",
+    "isOpen": true,
+    "latitude": 1,
+    "longitude": 1,
+    "workingHoursMonToSat": "10:00:00 - 20:00:00",
+    "workingHoursSun": "10:00:00 - 19:00:00"
+  },
+  {
+    "id": 3,
+    "name": "ზუმერის წერეთლის ფილიალი",
+    "address": "წერეთლის გამზ. N1",
+    "phone": "+995 591 967 601",
+    "workingHours": [
+      {
+        "id": 15,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 16,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 17,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 18,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 19,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 20,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 21,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      }
+    ],
+    "city": "თბილისი",
+    "isOpen": true,
+    "latitude": 41.7237,
+    "longitude": 44.792,
+    "workingHoursMonToSat": "10:00:00 - 20:00:00",
+    "workingHoursSun": "10:00:00 - 19:00:00"
+  },
+  {
+    "id": 4,
+    "name": "ზუმერის City Mall საბურთალო-ს ფილიალი",
+    "address": "\"სითი მოლი\" -  პეტრე ქავთარაძის N1",
+    "phone": "+995 591 971 962",
+    "workingHours": [
+      {
+        "id": 22,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 23,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 24,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 25,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 26,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 27,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 28,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      }
+    ],
+    "city": "თბილისი",
+    "isOpen": true,
+    "latitude": 41.7281,
+    "longitude": 44.7381,
+    "workingHoursMonToSat": "10:00:00 - 22:00:00",
+    "workingHoursSun": "10:00:00 - 22:00:00"
+  },
+  {
+    "id": 5,
+    "name": "ზუმერის პეკინის ფილიალი",
+    "address": "კ.გამსახურდიას (პეკინის) გამზირი N14ა",
+    "phone": "+995 591 967 671",
+    "workingHours": [
+      {
+        "id": 29,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 30,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 31,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 32,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 33,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 34,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 35,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      }
+    ],
+    "city": "თბილისი",
+    "isOpen": true,
+    "latitude": 41.7218,
+    "longitude": 44.774,
+    "workingHoursMonToSat": "10:00:00 - 21:00:00",
+    "workingHoursSun": "10:00:00 - 20:00:00"
+  },
+  {
+    "id": 6,
+    "name": "ზუმერის \"თბილისი ცენტრალის\" ფილიალი",
+    "address": "\"თბილისი ცენტრალი\"- lll სართული",
+    "phone": "+995 599 862 449",
+    "workingHours": [
+      {
+        "id": 36,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 37,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 38,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 39,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 40,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 41,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 42,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      }
+    ],
+    "city": "თბილისი",
+    "isOpen": true,
+    "latitude": 41.7217,
+    "longitude": 44.7997,
+    "workingHoursMonToSat": "10:00:00 - 20:00:00",
+    "workingHoursSun": "10:00:00 - 19:00:00"
+  },
+  {
+    "id": 7,
+    "name": "ზუმერის თბილისი მოლის ფილიალი",
+    "address": "„თბილისი მოლი\" - I სართული. აღმაშენებლის ხეივანი მე-16 კმ",
+    "phone": "+995 591 967 608",
+    "workingHours": [
+      {
+        "id": 43,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 44,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 45,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 46,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 47,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 48,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 49,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      }
+    ],
+    "city": "თბილისი",
+    "isOpen": true,
+    "latitude": 41.8172,
+    "longitude": 44.7723,
+    "workingHoursMonToSat": "10:00:00 - 22:00:00",
+    "workingHoursSun": "10:00:00 - 22:00:00"
+  },
+  {
+    "id": 8,
+    "name": "ზუმერის \"გლდანი მოლის\" ფილიალი",
+    "address": "\"გლდანი მოლი\" - I სართული, M-ახმეტელის მიმდებარე",
+    "phone": "+995 591 967 673",
+    "workingHours": [
+      {
+        "id": 50,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 51,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 52,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 53,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 54,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 55,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 56,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      }
+    ],
+    "city": "თბილისი",
+    "isOpen": true,
+    "latitude": 41.792,
+    "longitude": 44.8156,
+    "workingHoursMonToSat": "10:00:00 - 21:00:00",
+    "workingHoursSun": "10:00:00 - 20:00:00"
+  },
+  {
+    "id": 9,
+    "name": "ზუმერის ისთ ფოინთის ფილიალი",
+    "address": "\"ისთ ფოინთი\" - ალ. თვალჭრელიძე N2",
+    "phone": "+995 591 340 476",
+    "workingHours": [
+      {
+        "id": 57,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 58,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 59,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 60,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 61,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 62,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 63,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      }
+    ],
+    "city": "თბილისი",
+    "isOpen": true,
+    "latitude": 41.691,
+    "longitude": 43.8965,
+    "workingHoursMonToSat": "10:00:00 - 22:00:00",
+    "workingHoursSun": "10:00:00 - 22:00:00"
+  },
+  {
+    "id": 11,
+    "name": "ზუმერი რუსთავი მოლის ფილიალი",
+    "address": "შარტავას და ლომოურის კვეთა",
+    "phone": "+995 591 441 082",
+    "workingHours": [
+      {
+        "id": 71,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 72,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 73,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 74,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 75,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 76,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 77,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      }
+    ],
+    "city": "რუსთავი",
+    "isOpen": true,
+    "latitude": 41.563,
+    "longitude": 44.9754,
+    "workingHoursMonToSat": "10:00:00 - 22:00:00",
+    "workingHoursSun": "10:00:00 - 22:00:00"
+  },
+  {
+    "id": 12,
+    "name": "ბათუმის \"Black Sea Mall\"-ის ფილიალი",
+    "address": "\"Black Sea Mall\" - ტბელ აბუსერიძის N22",
+    "phone": "+995 591 310 257",
+    "workingHours": [
+      {
+        "id": 78,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 79,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 80,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 81,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 82,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 83,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      },
+      {
+        "id": 84,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "21:00:00",
+        "working": true
+      }
+    ],
+    "city": "ბათუმი",
+    "isOpen": true,
+    "latitude": 41.6373,
+    "longitude": 41.6198,
+    "workingHoursMonToSat": "10:00:00 - 21:00:00",
+    "workingHoursSun": "10:00:00 - 21:00:00"
+  },
+  {
+    "id": 13,
+    "name": "ბათუმი ჭავჭავაძის ფილიალი",
+    "address": "ბათუმი, ჭავჭავაძის N21",
+    "phone": "+995 591 967 606",
+    "workingHours": [
+      {
+        "id": 85,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 86,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 87,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 88,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 89,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 90,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 91,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      }
+    ],
+    "city": "ბათუმი",
+    "isOpen": true,
+    "latitude": 41.6457,
+    "longitude": 41.6376,
+    "workingHoursMonToSat": "10:00:00 - 20:00:00",
+    "workingHoursSun": "10:00:00 - 19:00:00"
+  },
+  {
+    "id": 30,
+    "name": "ბათუმის გრანდ მოლის ფილიალი",
+    "address": "\"გრანდ მოლი\" - შერიფ ხიმშიაშვილის 29",
+    "phone": "+995 591 022 872",
+    "workingHours": [
+      {
+        "id": 204,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 205,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 206,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 207,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 208,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 209,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 210,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      }
+    ],
+    "city": "ბათუმი",
+    "isOpen": true,
+    "latitude": 41.635973773879726,
+    "longitude": 41.607611984657886,
+    "workingHoursMonToSat": "10:00:00 - 22:00:00",
+    "workingHoursSun": "10:00:00 - 22:00:00"
+  },
+  {
+    "id": 14,
+    "name": "ქუთაისის ფილიალი",
+    "address": "თამარ მეფის ქ. N3 , ქუთაისის ცენტრალური მოედანი",
+    "phone": "+955 591 967 605",
+    "workingHours": [
+      {
+        "id": 92,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 93,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 94,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 95,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 96,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 97,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 98,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      }
+    ],
+    "city": "ქუთაისი",
+    "isOpen": true,
+    "latitude": 42.271,
+    "longitude": 42.7058,
+    "workingHoursMonToSat": "10:00:00 - 20:00:00",
+    "workingHoursSun": "10:00:00 - 19:00:00"
+  },
+  {
+    "id": 15,
+    "name": "ქუთაისი ვესთ მოლი",
+    "address": "\"ვესთ მოლი\"  - შარტავას N2",
+    "phone": "+995 595 306 765",
+    "workingHours": [
+      {
+        "id": 99,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 100,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 101,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 102,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 103,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 104,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 105,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      }
+    ],
+    "city": "ქუთაისი",
+    "isOpen": true,
+    "latitude": 42.263,
+    "longitude": 42.6701,
+    "workingHoursMonToSat": "10:00:00 - 22:00:00",
+    "workingHoursSun": "10:00:00 - 22:00:00"
+  },
+  {
+    "id": 16,
+    "name": "ქუთაისი \"გრანდ მოლის\" ფილიალი",
+    "address": "\"გრანდ მოლი\" -  მაღაზია 139. ჭავჭავაძის ქ. N67",
+    "phone": "+995 591 967 604",
+    "workingHours": [
+      {
+        "id": 106,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "18:30:00",
+        "working": false
+      },
+      {
+        "id": 107,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "18:30:00",
+        "working": true
+      },
+      {
+        "id": 108,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "18:30:00",
+        "working": true
+      },
+      {
+        "id": 109,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "18:30:00",
+        "working": true
+      },
+      {
+        "id": 110,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "18:30:00",
+        "working": true
+      },
+      {
+        "id": 111,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "18:30:00",
+        "working": true
+      },
+      {
+        "id": 112,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "18:30:00",
+        "working": true
+      }
+    ],
+    "city": "ქუთაისი",
+    "isOpen": true,
+    "latitude": 42.256,
+    "longitude": 42.6727,
+    "workingHoursMonToSat": "10:00:00 - 18:30:00",
+    "workingHoursSun": "10:00:00 - 18:30:00"
+  },
+  {
+    "id": 17,
+    "name": "ზუგდიდი მოლის ფილიალი",
+    "address": "ზუგდიდი, კოსტავას ქუჩა №28",
+    "phone": "+995 591 676 489",
+    "workingHours": [
+      {
+        "id": 113,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 114,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 115,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 116,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 117,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 118,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 119,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      }
+    ],
+    "city": "ზუგდიდი",
+    "isOpen": true,
+    "latitude": 42.503,
+    "longitude": 41.8486,
+    "workingHoursMonToSat": "10:00:00 - 22:00:00",
+    "workingHoursSun": "10:00:00 - 22:00:00"
+  },
+  {
+    "id": 32,
+    "name": "თელავი მოლის ფილიალი",
+    "address": "\"თელავი მოლი\" - ალაზნის ქ.N77",
+    "phone": "+995 595 069 853",
+    "workingHours": [
+      {
+        "id": 218,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 219,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 220,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 221,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 222,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 223,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      },
+      {
+        "id": 224,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "20:00:00",
+        "working": true
+      }
+    ],
+    "city": "თელავი",
+    "isOpen": true,
+    "latitude": 41.9275291360046,
+    "longitude": 45.47288588891862,
+    "workingHoursMonToSat": "10:00:00 - 20:00:00",
+    "workingHoursSun": "10:00:00 - 20:00:00"
+  },
+  {
+    "id": 19,
+    "name": "ახალციხის ფილიალი",
+    "address": "ახალციხე, თამარ მეფის ქ. N9",
+    "phone": "+995 598 088 659",
+    "workingHours": [
+      {
+        "id": 127,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 128,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 129,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 130,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 131,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 132,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 133,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      }
+    ],
+    "city": "ახალციხე",
+    "isOpen": true,
+    "latitude": 41.6393,
+    "longitude": 42.9879,
+    "workingHoursMonToSat": "10:00:00 - 19:00:00",
+    "workingHoursSun": "10:00:00 - 19:00:00"
+  },
+  {
+    "id": 31,
+    "name": "გორის ფილიალი",
+    "address": "გორი, ცხინვალის გზატკეცილი 14-14ა",
+    "phone": "+995 591 198 248 ",
+    "workingHours": [
+      {
+        "id": 211,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 212,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 213,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 214,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 215,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 216,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      },
+      {
+        "id": 217,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "22:00:00",
+        "working": true
+      }
+    ],
+    "city": "გორი",
+    "isOpen": true,
+    "latitude": 41.994261587680434,
+    "longitude": 44.11214485776633,
+    "workingHoursMonToSat": "10:00:00 - 22:00:00",
+    "workingHoursSun": "10:00:00 - 22:00:00"
+  },
+  {
+    "id": 20,
+    "name": "ინტერნეტ მაღაზია",
+    "address": "თბილისი",
+    "phone": "+995 (32) 2 60 30 60",
+    "workingHours": [
+      {
+        "id": 134,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 135,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 136,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 137,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 138,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 139,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 140,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      }
+    ],
+    "city": "თბილისი",
+    "isOpen": true,
+    "latitude": 41.7237,
+    "longitude": 44.792,
+    "workingHoursMonToSat": "10:00:00 - 19:00:00",
+    "workingHoursSun": "10:00:00 - 19:00:00"
+  },
+  {
+    "id": 29,
+    "name": "ზუმერის  საწყობი ",
+    "address": "თბილისი",
+    "phone": null,
+    "workingHours": [
+      {
+        "id": 197,
+        "day": "Sunday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 198,
+        "day": "Monday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 199,
+        "day": "Tuesday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 200,
+        "day": "Wednesday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 201,
+        "day": "Thursday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 202,
+        "day": "Friday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      },
+      {
+        "id": 203,
+        "day": "Saturday",
+        "from": "10:00:00",
+        "to": "19:00:00",
+        "working": true
+      }
+    ],
+    "city": "თბილისი",
+    "isOpen": true,
+    "latitude": 41.7459,
+    "longitude": 44.7533,
+    "workingHoursMonToSat": "10:00:00 - 19:00:00",
+    "workingHoursSun": "10:00:00 - 19:00:00"
+  }
+]

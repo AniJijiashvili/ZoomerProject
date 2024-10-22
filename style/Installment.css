@@ -98,3 +98,16 @@
     line-height: 1.38;
 
 }
+
+@media screen and (max-width: 600px) {
+  .installment__container__content--text--photo img{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    max-width: 300px;
+  }
+  .installment__container__content--heading{
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}

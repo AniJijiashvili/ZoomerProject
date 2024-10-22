@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trade Policy</title>
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="style/branches.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+    <main>
+      <div class="branches">
+        <div class="branches__head">
+          <div class="branches_title">
+            <h2 class="branch__title__head">ფილიალები</h2>
+          </div>
+
+          <div class="branches__actions">
+            <form action="" id="branches_search_conteiner">
+              <img src="./assets/header/main-search.svg" alt="search-logo" />
+              <input
+                id="search_input"
+                type="text"
+                placeholder="მოძებნე ფილიალი"
+                onclick="displaySearchValue()"
+              />
+            </form>
+
+            <div class="branches__dropdown-container">
+              <div class="dropdown">
+                <button id="dropdownButton" class="dropdown-button">
+                  <h4>აირჩიე ქალაქი</h4>
+                  <img src="./icons/drop_up.svg" alt="drop_up" id="drop_up" />
+                  <img
+                    src="./icons/drop_down.svg"
+                    alt="drop_down"
+                    id="drop_down"
+                  />
+                </button>
+                <ul id="dropdownList" class="dropdown-list">
+                  <li data-value="default">ყველა ქალაქი</li>
+                  <li data-value="თბილისი">თბილისი</li>
+                  <li data-value="რუსთავი">რუსთავი</li>
+                  <li data-value="ბათუმი">ბათუმი</li>
+                  <li data-value="ქუთაისი">ქუთაისი</li>
+                  <li data-value="ზუგდიდი">ზუგდიდი</li>
+                  <li data-value="თელავი">თელავი</li>
+                  <li data-value="ახალციხე">ახალციხე</li>
+                  <li data-value="გორი">გორი</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="branches__checkbox-container">
+              <img src="./icons/check-box.svg" alt="check box" id="check-box" />
+              <img
+                src="./icons/filter-checkbox-active.svg"
+                alt="activated check box"
+                id="activated_check-box"
+              />
+              <span>ღიაა</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="branches__mobile-dropdown">
+          <div class="mobile__dropdown-container">
+            <div class="dropdown">
+              <button id="mobileDropdownButton" class="dropdown-button">
+                <h4>აირჩიე ქალაქი</h4>
+                <img
+                  src="./icons/drop_up.svg"
+                  alt="drop_up"
+                  id="mobile_drop_up"
+                />
+                <img
+                  src="./icons/drop_down.svg"
+                  alt="drop_down"
+                  id="mobile_drop_down"
+                />
+              </button>
+              <ul id="mobileDropdownList" class="dropdown-list">
+                <li data-value="default">ყველა ქალაქი</li>
+                <li data-value="თბილისი">თბილისი</li>
+                <li data-value="რუსთავი">რუსთავი</li>
+                <li data-value="ბათუმი">ბათუმი</li>
+                <li data-value="ქუთაისი">ქუთაისი</li>
+                <li data-value="ზუგდიდი">ზუგდიდი</li>
+                <li data-value="თელავი">თელავი</li>
+                <li data-value="ახალციხე">ახალციხე</li>
+                <li data-value="გორი">გორი</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="branches-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95286.53635032431!2d44.678780289452696!3d41.72690007756033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404472d83ad9d9e9%3A0x69fea10e8173f9dc!2sZoommer!5e0!3m2!1sen!2sge!4v1729523796421!5m2!1sen!2sge"
+          ></iframe>
+        </div>
+
+        <div class="mobile_search_container">
+          <form action="" id="mobile__branches_search_conteiner">
+            <img src="./assets/header/main-search.svg" alt="search-logo" />
+            <input
+              id="search_input"
+              type="text"
+              placeholder="მოძებნე ფილიალი"
+              onclick="displaySearchValue()"
+            />
+          </form>
+        </div>
+
+        <div class="branch-container" id="branch-container">
+          <!-- Branches will be loaded here by JavaScript -->
+        </div>
+      </div>
+    </main>
+    <footer id="footer"></footer>
+    <script src="script.js"></script>
+    <script src="branches.js"></script>
+  </body>
+</html>

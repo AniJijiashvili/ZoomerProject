@@ -1,68 +1,77 @@
 @font-face {
-    font-family: Firago;
-    src: url("../fonts/Firago/FiraGO-Regular.otf");
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: Firago;
+  src: url("../fonts/Firago/FiraGO-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
-    font-family: Firago;
+  font-family: Firago;
 }
-.about{
+.about {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto 60px auto;
+  padding: 0px 15px;
+}
+.about_title {
+  padding-bottom: 24px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f2f2f2;
+}
+.about__title__head {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black-main);
+}
+.about__content--title {
+  text-align: center;
+  font-weight: 700;
+  font-family: Firago;
+  font-size: 12pt;
+  line-height: 17.12px;
+  width: 50%;
+  margin: 50px auto;
+}
+.about__content--secondtitle {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+.about__content--textis {
+  color: #ff8b11;
+  font-size: 12pt;
+}
+.about__body {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 12pt;
+}
+.about__content--text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Firago;
+}
+
+@media screen and (max-width: 800px) {
+  .about__body {
+    gap: 20px;
+  }
+  .about__content--secondtitle{
+    font-size: 20px;
+
+  }
+  .about__content--title{
     width: 100%;
-    max-width: 1200px;
-    margin: 30px auto 60px auto;
-    padding: 0px 15px;
-}
-.about_title{
-    padding-bottom: 24px;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #f2f2f2;
-}
-.about__title__head{
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--black-main);
-}
-.about__content--title{
-    text-align: center;
-    font-weight: 700;
-    font-family: Firago;
-    font-size: 12pt;
-    line-height: 17.12px;
-    width: 50%;
-    margin:50px auto
-
-}
-.about__content--secondtitle{
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-
-
-}
-.about__content--textis{
-    color: #ff8b11;
-    font-size: 12pt;
-
-}
-.about__body{
-    display: flex;
-    flex-direction: column;
-    gap:60px;
-    width: 70%;
-    margin:0 auto;
-    text-align: justify;
-    font-size: 12pt;
-}
-.about__content--text{
-    display: flex;
-    flex-direction: column;
-    gap:20px;
-    font-family: Firago;
+  }
 }
