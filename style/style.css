@@ -120,10 +120,14 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     "sans-serif";
+  
+}
+main{
+  margin: 30px 0px 60px 0px;
 }
 .product-categories {
   max-width: 1200px !important;
-  margin: 20px auto 0px auto;
+  margin: 0px auto ;
   width: 100%;
   padding: 0px 15px;
   position: relative;
