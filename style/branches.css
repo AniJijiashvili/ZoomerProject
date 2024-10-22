@@ -21,9 +21,14 @@
 .branches__actions {
   display: flex;
   align-items: center;
-  width: 622px;
+  max-width: 622px;
   height: 60px;
+  gap: 20px;
   justify-content: space-between;
+}
+
+.mobile_search_container {
+  display: none;
 }
 
 #branches_search_conteiner {
@@ -36,6 +41,10 @@
   cursor: pointer;
   display: flex;
   gap: 15px;
+}
+
+.branches__mobile-dropdown {
+  display: none;
 }
 
 .branches__dropdown-container {
@@ -135,6 +144,10 @@
   font-size: 14px;
   margin-left: 5px;
 }
+.branches__checkbox-container img {
+  height: 20px;
+  width: 20px;
+}
 
 .branches-map {
   margin-top: 30px;
@@ -170,12 +183,6 @@
   /* Responsive width based on container size */
   flex: 1 1 calc(33.333% - 21px); /* Default: 3 cards per row */
   box-sizing: border-box;
-}
-
-@media (max-width: 1024px) {
-  .branch-card {
-    flex: 1 1 100%; /* 1 card per row on small screens */
-  }
 }
 
 /* Upper part styling */
@@ -223,4 +230,54 @@
   height: 14px;
   font-size: 12px;
   color: #000000cc;
+}
+
+@media (max-width: 1024px) {
+  .branch-card {
+    flex: 1 1 100%; /* 1 card per row on small screens */
+  }
+  #branches_search_conteiner {
+    display: none;
+  }
+  .branches__dropdown-container {
+    display: none;
+  }
+  .mobile__dropdown-container {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+  }
+  .branches__mobile-dropdown {
+    display: block;
+  }
+  .dropdown-button {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 30px;
+  }
+
+  #mobile_drop_up {
+    display: none;
+  }
+
+  #mobile_drop_down {
+    display: block;
+  }
+
+  .mobile_search_container {
+    display: block;
+  }
+
+  #mobile__branches_search_conteiner {
+    width: 100%;
+    height: 50px;
+    background-color: var(--white-main);
+    border: 1px solid rgba(236, 94, 42, 0.5);
+    border-radius: 12px;
+    padding: 15px 22px;
+    cursor: pointer;
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
 }

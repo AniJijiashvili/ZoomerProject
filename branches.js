@@ -1,62 +1,88 @@
-// Get the dropdown button and list elements
+// Get the dropdown button and list elements for the desktop version
 const dropdownButton = document.getElementById("dropdownButton");
 const dropdownList = document.getElementById("dropdownList");
 const dropdownIcon = document.getElementById("drop_down");
 const dropupIcon = document.getElementById("drop_up");
-dropdownList.style.display = "none";
 
-// Toggle the dropdown list visibility when clicking the button
-dropdownButton.addEventListener("click", (event) => {
-  event.stopPropagation(); // Prevents the click from closing the dropdown immediately
+// Define the function
+function dropdownFunction(
+  dropdownButton,
+  dropdownList,
+  dropdownIcon,
+  dropupIcon
+) {
+  dropdownList.style.display = "none";
 
-  // Toggle dropdown list visibility
-  dropdownList.style.display =
-    dropdownList.style.display === "block" ? "none" : "block";
+  // Toggle the dropdown list visibility when clicking the button
+  dropdownButton.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevents the click from closing the dropdown immediately
 
-  // Toggle the icons
-  if (dropdownList.style.display === "block") {
-    dropdownIcon.style.display = "none";
-    dropupIcon.style.display = "block";
-  } else {
-    dropdownIcon.style.display = "block";
-    dropupIcon.style.display = "none";
-  }
-});
+    // Toggle dropdown list visibility
+    dropdownList.style.display =
+      dropdownList.style.display === "block" ? "none" : "block";
 
-// Handle option selection
-const dropdownItems = dropdownList.querySelectorAll("li");
-dropdownItems.forEach((item) => {
-  item.addEventListener("click", function (event) {
-    // Prevent event from bubbling up to document listener
-    event.stopPropagation();
-
-    const selectedValue = this.dataset.value;
-
-    // If "ყველა ქალაქი" is selected, reset to default text
-    if (selectedValue === "default") {
-      dropdownButton.querySelector("h4").textContent = "აირჩიე ქალაქი";
+    // Toggle the icons
+    if (dropdownList.style.display === "block") {
+      dropdownIcon.style.display = "none";
+      dropupIcon.style.display = "block";
     } else {
-      dropdownButton.querySelector("h4").textContent = selectedValue;
+      dropdownIcon.style.display = "block";
+      dropupIcon.style.display = "none";
     }
-
-    // After selecting an item, hide the dropdown and toggle icons
-    dropdownList.style.display = "none";
-    dropdownIcon.style.display = "block"; // Show down icon
-    dropupIcon.style.display = "none"; // Hide up icon
   });
-});
 
-// Close the dropdown when clicking outside of it
-document.addEventListener("click", function (event) {
-  if (
-    !dropdownButton.contains(event.target) &&
-    !dropdownList.contains(event.target)
-  ) {
-    dropdownList.style.display = "none";
-    dropdownIcon.style.display = "block"; // Show down icon
-    dropupIcon.style.display = "none"; // Hide up icon
-  }
-});
+  // Handle option selection
+  const dropdownItems = dropdownList.querySelectorAll("li");
+  dropdownItems.forEach((item) => {
+    item.addEventListener("click", function (event) {
+      // Prevent event from bubbling up to document listener
+      event.stopPropagation();
+
+      const selectedValue = this.dataset.value;
+
+      // If "ყველა ქალაქი" is selected, reset to default text
+      if (selectedValue === "default") {
+        dropdownButton.querySelector("h4").textContent = "აირჩიე ქალაქი";
+      } else {
+        dropdownButton.querySelector("h4").textContent = selectedValue;
+      }
+
+      // After selecting an item, hide the dropdown and toggle icons
+      dropdownList.style.display = "none";
+      dropdownIcon.style.display = "block"; // Show down icon
+      dropupIcon.style.display = "none"; // Hide up icon
+    });
+  });
+
+  // Close the dropdown when clicking outside of it
+  document.addEventListener("click", function (event) {
+    if (
+      !dropdownButton.contains(event.target) &&
+      !dropdownList.contains(event.target)
+    ) {
+      dropdownList.style.display = "none";
+      dropdownIcon.style.display = "block"; // Show down icon
+      dropupIcon.style.display = "none"; // Hide up icon
+    }
+  });
+}
+
+// Call the function for desktop dropdown
+dropdownFunction(dropdownButton, dropdownList, dropdownIcon, dropupIcon);
+
+// Get the elements for the mobile version
+const mobileDropdownButton = document.getElementById("mobileDropdownButton");
+const mobileDropdownList = document.getElementById("mobileDropdownList");
+const mobileDropdownIcon = document.getElementById("mobile_drop_down");
+const mobileDropupIcon = document.getElementById("mobile_drop_up");
+
+// Call the function for mobile dropdown
+dropdownFunction(
+  mobileDropdownButton,
+  mobileDropdownList,
+  mobileDropdownIcon,
+  mobileDropupIcon
+);
 
 /////////////////////////////////////////
 
