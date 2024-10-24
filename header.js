@@ -14,7 +14,6 @@ const autorizationContainer = document.getElementById(
   "authorization_container"
 );
 
-
 window.addEventListener("scroll", () => {
   const headerBar = document.querySelector("header");
   const navigation = document.getElementById("header__details");
@@ -29,7 +28,6 @@ window.addEventListener("scroll", () => {
     }
   }
 });
-
 
 function handlePopupOpen() {
   popupContainer.classList.add("open");
@@ -52,7 +50,6 @@ function handlePopupClose() {
   document.body.style.overflow = "";
   overlay.style.display = "none";
 }
-
 
 function handleAutorization() {
   const radioButton = document.getElementById("radio_rules--container");
@@ -129,7 +126,6 @@ function handleAutorization() {
   handleAutorizationType();
 }
 
-
 function handleRegistration() {
   const radioButton = document.getElementById("radio_rules--container");
   const popupBtn = document.getElementById("popup_btn");
@@ -150,7 +146,6 @@ function handleRegistration() {
 </p>`;
 }
 
-
 let clicked = false;
 
 function handleTickRules() {
@@ -162,8 +157,6 @@ function handleTickRules() {
     radioBtn.src = "./assets/header/frame.png";
   }
 }
-
-
 
 async function fetchData() {
   const url = "https://restcountries.com/v3.1/all";
@@ -255,16 +248,13 @@ async function handleDropdownCountries() {
   });
 }
 
-
 function displayCountryOptions() {
   countyContainer.classList.toggle("active");
 }
 
-
 function handleChangeLaguage() {
   languageOptions.classList.toggle("active");
 }
-
 
 let handleOpenCart = () => {
   try {
@@ -273,7 +263,6 @@ let handleOpenCart = () => {
     console.error("Failed to open cart:", error);
   }
 };
-
 
 async function searchData() {
   try {
@@ -294,7 +283,6 @@ async function displaySearchValue() {
 
   const searchInput = document.getElementById("search_input");
   const data = await searchData();
-
 
   searchInput.addEventListener("keyup", async () => {
     const searchValue = searchInput.value.toLowerCase();
@@ -331,7 +319,6 @@ async function displaySearchValue() {
         searchResult.remove();
       }
     });
-
 
     if (searchValue.length > 0) {
       const overlaySearch = document.getElementById("search_result--overlay");
@@ -433,24 +420,16 @@ async function displaySearchValue() {
 function handleAsideSlider() {
   const asideSliderContainer = document.getElementById("aside_slider");
   const search_conteiner = document.getElementById("#search_conteiner");
+  const burgerManu = document.getElementById("#burger");
+  const inputSearch = document.getElementById("#search_conteiner");
+  const headerIcons = document.getElementById("#header_icons");
 
   if (asideSliderContainer.style.display === "flex") {
     asideSliderContainer.style.display = "none";
-    search_conteiner.style.display = "flex";
+    // search_conteiner.style.display = "flex";
     asideSliderContainer.style.transform = "translateX(0%)";
-    asideSliderContainer.innerHTML = `
-    <div class="aside_slider--input">
-        <form action="" id="search_conteiner slider-input">
-          <img src="./assets/header/main-search.svg" alt="search-logo" />
-          <input
-            id="search_input"
-            type="text"
-            placeholder="ძიება"
-            onclick="displaySearchValue()"
-          />
-          <img src="./assets/header/searchLoop.svg" alt="loop" />
-        </form>
-      </div>`;
+    // inputSearch.style.display = "flex";
+    // headerIcons.style.display = "none";
   } else {
     asideSliderContainer.style.display = "flex";
     asideSliderContainer.style.transform = "translateX(-100%)";
@@ -459,5 +438,22 @@ function handleAsideSlider() {
       asideSliderContainer.style.transition = "transform 0.3s ease";
       asideSliderContainer.style.transform = "translateX(0%)";
     }, 10);
+  }
+}
+
+// raturn main
+
+function handleMain() {
+  try {
+    const width = 1023;
+    const height = 768;
+
+    window.open(
+      "index.html",
+      "_blank",
+      `width=${width},height=${height},resizable=yes`
+    );
+  } catch (error) {
+    console.error("Failed to open index:", error);
   }
 }

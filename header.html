@@ -6,8 +6,6 @@
     <title>Zoomer.ge</title>
     <link rel="stylesheet" href="./style/header.css" />
     <link rel="stylesheet" href="./style/reset.css" />
-    
-
   </head>
   <body>
     <header>
@@ -25,16 +23,21 @@
               <a href="./installment.html">განვადება</a>
             </li>
             <li class="nav__list--item"><a href="./career.html">კარიერა</a></li>
-            <li class="nav__list--item"><a href="./tradein.html">Trade In</a></li>
-            <li class="nav__list--item"><a href="./branches.html">ფილიალები</a></li>
-            <li class="nav__list--item"><a href="./sales.html">ყველა აქცია</a></li>
-
+            <li class="nav__list--item">
+              <a href="./tradein.html">Trade In</a>
+            </li>
+            <li class="nav__list--item">
+              <a href="./branches.html">ფილიალები</a>
+            </li>
+            <li class="nav__list--item">
+              <a href="./sales.html">ყველა აქცია</a>
+            </li>
           </ul>
         </div>
       </div>
       <div id="header__controls">
         <img
-          class="burger"
+          id="burger"
           src="./assets/header/burger-icon.svg"
           alt="burger-icon"
           onclick="handleAsideSlider()"
@@ -48,7 +51,11 @@
             <a href="./navigation.html"> <h4>ნავიგაცია</h4></a>
           </div>
 
-          <form action="" id="search_conteiner">
+          <form
+            action=""
+            id="search_conteiner"
+            class="search_input--container-all"
+          >
             <img src="./assets/header/main-search.svg" alt="search-logo" />
             <input
               id="search_input"
@@ -95,7 +102,7 @@
             <h4>შესვლა</h4>
           </div>
 
-          <div class="header_icons">
+          <div id="header_icons">
             <img src="./assets/header/searchLoop.svg" alt="loop" />
             <a href="./cart.html">
               <img src="./assets/header/cart.svg" alt=" cart"
@@ -135,7 +142,7 @@
     <div class="below_header">
       <div class="below_header--container">
         <!-- card1 -->
-        <div class="below_header--card">
+        <div class="below_header--card" onclick="handleMain()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -155,7 +162,7 @@
         </div>
 
         <!-- card1 -->
-        <div class="below_header--card">
+        <div class="below_header--card" onclick="handleAsideSlider()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -260,7 +267,25 @@
 
     <!-- asidebar -->
 
-    <div id="aside_slider"></div>
+    <div id="aside_slider">
+      <div class="aside_slider--input">
+        <form
+          action=""
+          id="search_conteiner"
+          class="search_input--container-all aside_input"
+        >
+          <img src="./assets/header/main-search.svg" alt="search-logo" />
+          <input
+            id="search_input"
+            type="text"
+            placeholder="ძიება"
+            onclick="displaySearchValue()"
+          />
+        </form>
+      </div>
+
+      <div class="slider_content"></div>
+    </div>
 
     <!-- popup  -->
     <div class="main_popup">
