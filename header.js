@@ -60,7 +60,7 @@ function handleAutorization() {
   const popupInputs = document.getElementById("popup_inputs");
 
   redBottom.style.left = "0px";
-  redBottom.style.right = "200px";
+  redBottom.style.right = "300px";
   autorizationContainer.style.display = "flex";
   countyContainer.classList.remove("active");
   radioButton.style.display = "none";
@@ -87,7 +87,7 @@ function handleAutorization() {
                 <div class="number_input-field">
                   <input
                     class="popup_input"
-                    id="email_input"
+                    id="password_input"
                     type="password"
                     placeholder=" "
                   />
@@ -96,16 +96,22 @@ function handleAutorization() {
                     src="./assets/header/hiddenPassword.svg"
                     alt="passwrd_hide"
                     id="password_hide"
-                  />
+                 />
                 </div>
       `;
 
-      const handleShowPassword = () => {
-        const hideImg = document.getElementById("password_hide");
-        hideImg.addEventListener("click", () => {
-          hideImg.src = "./assets/header/showPassword.svg";
-        });
-      };
+      // show password in popup
+      const hidePassword = document.getElementById("password_hide");
+      const passwordField = document.getElementById("password_input");
+
+      hidePassword.addEventListener("click", () => {
+        const isPasswordVisible = passwordField.type === "text";
+
+        passwordField.type = isPasswordVisible ? "password" : "text";
+        hidePassword.src = isPasswordVisible
+          ? "./assets/header/hiddenPassword.svg"
+          : "./assets/header/showPassword.svg";
+      });
     });
 
     numberBox.addEventListener("click", () => {
@@ -421,6 +427,16 @@ async function displaySearchValue() {
 function handleAsideSlider() {
 
   const asideSliderContainer = document.getElementById("aside_slider");
+
+  const burgerIcon = document.getElementById("burger");
+
+  if (asideSliderContainer.style.display === "flex") {
+    asideSliderContainer.style.display = "none";
+    asideSliderContainer.style.transform = "translateX(0%)";
+
+    burgerIcon.src = "./assets/header/burger-icon.svg";
+    burgerIcon.classList.remove("close_btn");
+
   const search_conteiner = document.getElementById("#search_conteiner");
   const burgerManu = document.getElementById("#burger");
   const inputSearch = document.getElementById("#search_conteiner");
@@ -460,19 +476,9 @@ const mySwiper2for = document.getElementById('mySwiper2for')
   }, 10);
 }
 
-// raturn main
-
-function handleMain() {
-  try {
-    const width = 1023;
-    const height = 768;
-
-    window.open(
-      "index.html",
-      "_blank",
-      `width=${width},height=${height},resizable=yes`
-    );
-  } catch (error) {
-    console.error("Failed to open index:", error);
-  }
+function closeAside() {
+  const asideSliderContainer = document.getElementById("aside_slider");
+  asideSliderContainer.style.display = "none";
 }
+
+// handleBelowHeader
