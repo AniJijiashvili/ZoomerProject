@@ -488,11 +488,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.matchMedia("(max-width: 1024px)").matches) {
       for (let sectionLine of sectionLines) {
         sectionLine.style.borderLeft = "0";
+        (sectionLine.style.backgroundColor = "#f2f2f2")
+
       }
 
       const sectionLine = event.currentTarget;
       (hoverSection[0].style.borderLeft = "0"),
         (sectionLine.style.borderLeft = "2px solid var(--orange-main)");
+        (sectionLine.style.backgroundColor = "white")
     }
   }
 
@@ -510,9 +513,11 @@ function addEventListeners() {
 
   const handleEvent = (index) => {
     if (isMobile) {
+
       handleMouseLeave(mobileContainer[0], "block"),
         (hoverSection[0].style.borderLeft = "2px solid var(--orange-main)");
-      hoverSection[index].addEventListener("click", () =>
+        (hoverSection[0].style.backgroundColor = "white");
+        hoverSection[index].addEventListener("click", () =>
         handleMouseOver(
           popupMobileSection[0],
           ...Array(8)
@@ -563,6 +568,8 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
 hoverSection[0].addEventListener("click", handleClick);
 
 window.addEventListener("resize", () => {
+  location.reload()
+
   if (window.matchMedia("(max-width: 1024px)").matches) {
     handleClick();
   }
@@ -578,6 +585,7 @@ window.addEventListener("resize", () => {
       sectionLine.style.borderLeft = "0";
     }
     hoverSection[0].style.borderLeft = "0";
+    location.reload()
   }
 });
 
