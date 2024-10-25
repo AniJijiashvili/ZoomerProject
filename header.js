@@ -415,30 +415,49 @@ async function displaySearchValue() {
   });
 }
 
+
 // aside slider
 
 function handleAsideSlider() {
+
   const asideSliderContainer = document.getElementById("aside_slider");
   const search_conteiner = document.getElementById("#search_conteiner");
   const burgerManu = document.getElementById("#burger");
   const inputSearch = document.getElementById("#search_conteiner");
   const headerIcons = document.getElementById("#header_icons");
+  const productCategories =  document.getElementById("productCategoriesfor")
+const mySwiper2for = document.getElementById('mySwiper2for')
 
   if (asideSliderContainer.style.display === "flex") {
     asideSliderContainer.style.display = "none";
+    mySwiper2for.style.display = "none"
+
     // search_conteiner.style.display = "flex";
     asideSliderContainer.style.transform = "translateX(0%)";
     // inputSearch.style.display = "flex";
     // headerIcons.style.display = "none";
+    productCategories.style.display = "none";
+    mySwiper2for.style.display = "block";
+    productCategories.classList.toggle('show');
+    console.log("close")
+
   } else {
     asideSliderContainer.style.display = "flex";
     asideSliderContainer.style.transform = "translateX(-100%)";
+    productCategories.style.display = "flex";
+    mySwiper2for.style.display = "none"
+    productCategories.classList.toggle('show');
 
-    setTimeout(() => {
-      asideSliderContainer.style.transition = "transform 0.3s ease";
-      asideSliderContainer.style.transform = "translateX(0%)";
-    }, 10);
+    console.log("open")
+
+
+
+   
   }
+  setTimeout(() => {
+    asideSliderContainer.style.transition = "transform 0.3s ease";
+    asideSliderContainer.style.transform = "translateX(0%)";
+  }, 10);
 }
 
 // raturn main
