@@ -4,9 +4,7 @@ const popupContainer = document.getElementById("popup_container");
 const overlay = document.getElementById("overlay");
 const popupContainerBox = document.getElementById("popup");
 const openCartButton = document.getElementById("open_cart");
-const openCountyOptions = document.getElementsByClassName(
-  "number_input--index"
-)[0];
+const openCountyOptions = document.getElementById("number_input--index");
 const countyContainer = document.getElementById("country_list--container");
 const selectedCounty = document.getElementById("deal_index");
 const languageContainer = document.getElementById("laguage");
@@ -16,20 +14,20 @@ const autorizationContainer = document.getElementById(
   "authorization_container"
 );
 
-
 window.addEventListener("scroll", () => {
   const headerBar = document.querySelector("header");
   const navigation = document.getElementById("header__details");
 
-  if (window.scrollY > 110) {
-    headerBar.classList.add("active");
-    navigation.style.display = "none";
-  } else {
-    headerBar.classList.remove("active");
-    navigation.style.display = "flex";
+  if (window.innerWidth > 1023) {
+    if (window.scrollY > 120) {
+      headerBar.classList.add("active");
+      navigation.style.display = "none";
+    } else {
+      headerBar.classList.remove("active");
+      navigation.style.display = "flex";
+    }
   }
 });
-
 
 function handlePopupOpen() {
   popupContainer.classList.add("open");
@@ -40,6 +38,8 @@ function handlePopupOpen() {
     handlePopupClose();
   });
   handleDropdownCountries();
+  handleAutorization();
+
   // handlePopupContent();
 }
 
@@ -51,20 +51,85 @@ function handlePopupClose() {
   overlay.style.display = "none";
 }
 
-
 function handleAutorization() {
+  const radioButton = document.getElementById("radio_rules--container");
+  const mailBox = document.getElementById("mail_box");
+  const numberBox = document.getElementById("number_box");
+  const indexContainer = document.getElementById("number_input--index");
+  const inputContainer = document.getElementById("number_input--container");
+  const popupInputs = document.getElementById("popup_inputs");
+
   redBottom.style.left = "0px";
   redBottom.style.right = "200px";
   autorizationContainer.style.display = "flex";
-  const radioButton = document.getElementById("radio_rules--container");
-
+  countyContainer.classList.remove("active");
   radioButton.style.display = "none";
-}
 
+  let handleAutorizationType = () => {
+    mailBox.addEventListener("click", () => {
+      mailBox.classList.add("active");
+      numberBox.classList.remove("active");
+
+      indexContainer.style.display = "none";
+      inputContainer.style.display = "flex";
+      inputContainer.style.flexDirection = "column";
+
+      popupInputs.innerHTML = `
+      <div class="number_input-field">
+                  <input
+                    class="popup_input"
+                    id="mail_input"
+                    type="password"
+                    placeholder=" "
+                  />
+                  <label for="">ელფოსტა</label>
+                </div>
+                <div class="number_input-field">
+                  <input
+                    class="popup_input"
+                    id="email_input"
+                    type="password"
+                    placeholder=" "
+                  />
+                  <label for="">პაროლი</label>
+                  <img
+                    src="./assets/header/hiddenPassword.svg"
+                    alt="passwrd_hide"
+                    id="password_hide"
+                  />
+                </div>
+      `;
+
+      const handleShowPassword = () => {
+        const hideImg = document.getElementById("password_hide");
+        hideImg.addEventListener("click", () => {
+          hideImg.src = "./assets/header/showPassword.svg";
+        });
+      };
+    });
+
+    numberBox.addEventListener("click", () => {
+      numberBox.classList.add("active");
+      mailBox.classList.remove("active");
+      indexContainer.style.display = "flex";
+      inputContainer.style.display = "grid";
+
+      popupInputs.innerHTML = `
+      <div class="number_input-field">
+      <input  class="popup_input" id="number_input" type="text" placeholder=" " />
+      <label for="">ტელეფონის ნომერი</label>
+    </div>
+      `;
+    });
+  };
+
+  handleAutorizationType();
+}
 
 function handleRegistration() {
   const radioButton = document.getElementById("radio_rules--container");
   const popupBtn = document.getElementById("popup_btn");
+  countyContainer.classList.remove("active");
 
   redBottom.style.left = "200px";
   autorizationContainer.style.display = "none";
@@ -81,7 +146,6 @@ function handleRegistration() {
 </p>`;
 }
 
-
 let clicked = false;
 
 function handleTickRules() {
@@ -93,8 +157,6 @@ function handleTickRules() {
     radioBtn.src = "./assets/header/frame.png";
   }
 }
-
-
 
 async function fetchData() {
   const url = "https://restcountries.com/v3.1/all";
@@ -168,7 +230,6 @@ async function handleDropdownCountries() {
       searchValue.value = "";
       handleDropdownCountries();
     });
-
     countriesList.appendChild(countryOption);
 
     return { countryOption, countryName };
@@ -187,16 +248,13 @@ async function handleDropdownCountries() {
   });
 }
 
-
 function displayCountryOptions() {
   countyContainer.classList.toggle("active");
 }
 
-
 function handleChangeLaguage() {
   languageOptions.classList.toggle("active");
 }
-
 
 let handleOpenCart = () => {
   try {
@@ -205,7 +263,6 @@ let handleOpenCart = () => {
     console.error("Failed to open cart:", error);
   }
 };
-
 
 async function searchData() {
   try {
@@ -227,10 +284,10 @@ async function displaySearchValue() {
   const searchInput = document.getElementById("search_input");
   const data = await searchData();
 
-
   searchInput.addEventListener("keyup", async () => {
     const searchValue = searchInput.value.toLowerCase();
     const inputForm = document.getElementById("search_conteiner");
+
     const searchResult = document.createElement("div");
     searchResult.classList.add("search_result");
 
@@ -263,50 +320,140 @@ async function displaySearchValue() {
       }
     });
 
-    const results = [];
+    if (searchValue.length > 0) {
+      const overlaySearch = document.getElementById("search_result--overlay");
+      overlaySearch.classList.add("active");
+      const searchResult = document.createElement("div");
+      searchResult.classList.add("search_result");
 
-    for (const key in data) {
-      data[key].forEach((item) => {
-        if (item.name.toLowerCase().includes(searchValue)) {
-          results.push(item);
+      const searchResultTitle = document.createElement("div");
+      searchResultTitle.classList.add("search_result--title");
+
+      const filterCategory = document.createElement("div");
+      filterCategory.textContent = "გაფილტრე კატეგორია";
+
+      const categoryAnchor = document.createElement("a");
+      categoryAnchor.href = "./navigation.html";
+
+      const allCategory = document.createElement("div");
+      allCategory.textContent = "ყველას ნახვა";
+      allCategory.classList.add("category");
+
+      // Append elements
+      categoryAnchor.appendChild(allCategory);
+      searchResultTitle.appendChild(filterCategory);
+      searchResultTitle.appendChild(categoryAnchor);
+      searchResult.appendChild(searchResultTitle);
+      inputForm.appendChild(searchResult);
+
+      document.addEventListener("click", (event) => {
+        if (
+          searchResult &&
+          !inputForm.contains(event.target) &&
+          event.target !== searchInput
+        ) {
+          searchResult.remove();
+          overlaySearch.classList.remove("active");
+          searchValue = "";
         }
       });
-    }
 
-    if (results.length > 0) {
-      results.forEach((item) => {
-        const resultDetails = document.createElement("div");
-        resultDetails.classList.add("search_result--details");
+      const results = [];
 
-        const resultDetailsContainer = document.createElement("div");
-        resultDetailsContainer.classList.add("search_details--container");
+      for (const key in data) {
+        data[key].forEach((item) => {
+          if (item.name.toLowerCase().includes(searchValue)) {
+            results.push(item);
+          }
+        });
+      }
 
-        const resultImg = document.createElement("img");
-        resultImg.classList.add("result_img");
-        resultImg.src = item.imageUrl;
+      if (results.length > 0) {
+        results.forEach((item) => {
+          const resultDetails = document.createElement("div");
+          resultDetails.classList.add("search_result--details");
 
-        const resultDetailsContent = document.createElement("div");
-        resultDetailsContent.classList.add("search_details--content");
+          const resultDetailsContainer = document.createElement("div");
+          resultDetailsContainer.classList.add("search_details--container");
 
-        const resultDetailsTitle = document.createElement("div");
-        resultDetailsTitle.classList.add("search_details--title");
-        resultDetailsTitle.textContent = item.name;
+          const resultImg = document.createElement("img");
+          resultImg.classList.add("result_img");
+          resultImg.src = item.imageUrl;
 
-        const resultDetailsPrice = document.createElement("div");
-        resultDetailsPrice.classList.add("search_details--price");
-        resultDetailsPrice.textContent = `${item.price}  ₾`;
+          const resultDetailsContent = document.createElement("div");
+          resultDetailsContent.classList.add("search_details--content");
 
-        resultDetailsContent.appendChild(resultDetailsTitle);
-        resultDetailsContent.appendChild(resultDetailsPrice);
-        resultDetailsContainer.appendChild(resultImg);
-        resultDetailsContainer.appendChild(resultDetailsContent);
-        resultDetails.appendChild(resultDetailsContainer);
-        searchResult.appendChild(resultDetails);
+          const resultDetailsTitle = document.createElement("div");
+          resultDetailsTitle.classList.add("search_details--title");
+          resultDetailsTitle.textContent = item.name;
 
-        if (searchValue == "") {
-          resultDetails.innerHTML = "";
-        }
-      });
+          const resultDetailsPrice = document.createElement("div");
+          resultDetailsPrice.classList.add("search_details--price");
+
+          const prevPrice = document.createElement("span");
+          prevPrice.classList.add("previous-price");
+
+          if (item.previousPrice) {
+            resultDetailsPrice.textContent = `${item.price} ₾`;
+            resultDetailsPrice.style.color = "var(--orange-main)";
+            prevPrice.textContent = `${item.previousPrice} ₾ prev`;
+            resultDetailsPrice.appendChild(prevPrice);
+          } else {
+            resultDetailsPrice.textContent = `${item.price} ₾`;
+          }
+
+          resultDetailsContent.appendChild(resultDetailsTitle);
+          resultDetailsContent.appendChild(resultDetailsPrice);
+          resultDetailsContainer.appendChild(resultImg);
+          resultDetailsContainer.appendChild(resultDetailsContent);
+          resultDetails.appendChild(resultDetailsContainer);
+          searchResult.appendChild(resultDetails);
+        });
+      }
+    } else {
     }
   });
+}
+
+// aside slider
+
+function handleAsideSlider() {
+  const asideSliderContainer = document.getElementById("aside_slider");
+  const search_conteiner = document.getElementById("#search_conteiner");
+  const burgerManu = document.getElementById("#burger");
+  const inputSearch = document.getElementById("#search_conteiner");
+  const headerIcons = document.getElementById("#header_icons");
+
+  if (asideSliderContainer.style.display === "flex") {
+    asideSliderContainer.style.display = "none";
+    // search_conteiner.style.display = "flex";
+    asideSliderContainer.style.transform = "translateX(0%)";
+    // inputSearch.style.display = "flex";
+    // headerIcons.style.display = "none";
+  } else {
+    asideSliderContainer.style.display = "flex";
+    asideSliderContainer.style.transform = "translateX(-100%)";
+
+    setTimeout(() => {
+      asideSliderContainer.style.transition = "transform 0.3s ease";
+      asideSliderContainer.style.transform = "translateX(0%)";
+    }, 10);
+  }
+}
+
+// raturn main
+
+function handleMain() {
+  try {
+    const width = 1023;
+    const height = 768;
+
+    window.open(
+      "index.html",
+      "_blank",
+      `width=${width},height=${height},resizable=yes`
+    );
+  } catch (error) {
+    console.error("Failed to open index:", error);
+  }
 }
