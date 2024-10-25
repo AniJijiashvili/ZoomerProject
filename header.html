@@ -103,7 +103,11 @@
           </div>
 
           <div id="header_icons">
-            <img src="./assets/header/searchLoop.svg" alt="loop" />
+            <img
+              src="./assets/header/searchLoop.svg"
+              alt="loop"
+              onclick="handleAsideSlider()"
+            />
             <a href="./cart.html">
               <img src="./assets/header/cart.svg" alt=" cart"
             /></a>
@@ -142,13 +146,14 @@
     <div class="below_header">
       <div class="below_header--container">
         <!-- card1 -->
-        <div class="below_header--card" onclick="handleMain()">
+        <div class="below_header--card">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
             fill="none"
             viewBox="0 0 24 24"
+            class="below_icons"
           >
             <path
               stroke="#7F8184"
@@ -158,7 +163,7 @@
               d="M12 18v-3M10.07 2.82 3.14 8.37c-.78.62-1.28 1.93-1.11 2.91l1.33 7.96c.24 1.42 1.6 2.57 3.04 2.57h11.2c1.43 0 2.8-1.16 3.04-2.57l1.33-7.96c.16-.98-.34-2.29-1.11-2.91l-6.93-5.54c-1.07-.86-2.8-.86-3.86-.01"
             ></path>
           </svg>
-          <h4>მთავარი</h4>
+          <h4 class="below_icons--title">მთავარი</h4>
         </div>
 
         <!-- card1 -->
@@ -168,6 +173,7 @@
             width="20"
             height="20"
             viewBox="0 0 1600 1600"
+            class="below_icons"
           >
             <g fill="#292D32" opacity="0.6">
               <path
@@ -175,7 +181,7 @@
               ></path>
             </g>
           </svg>
-          <h4>კატეგორიები</h4>
+          <h4 class="below_icons--title">კატეგორიები</h4>
         </div>
 
         <!-- card1 -->
@@ -187,6 +193,7 @@
               height="27"
               fill="none"
               viewBox="0 0 27 27"
+              class="below_icons"
             >
               <g
                 stroke="#fff"
@@ -221,7 +228,7 @@
             height="20"
             fill="none"
             viewBox="0 0 24 24"
-            class=""
+            class="below_icons"
           >
             <path
               stroke="#7F8184"
@@ -232,7 +239,7 @@
               d="m20.5 14.99-5.01 5.02M3.5 14.99h17M3.5 9.01l5.01-5.02M20.5 9.01h-17"
             ></path>
           </svg>
-          <h4>შედარება</h4>
+          <h4 class="below_icons--title">შედარება</h4>
         </div>
 
         <!-- card1 -->
@@ -243,7 +250,7 @@
             height="20"
             fill="none"
             viewBox="0 0 24 24"
-            class=""
+            class="below_icons"
           >
             <g
               stroke="#292D32"
@@ -260,14 +267,19 @@
               ></path>
             </g>
           </svg>
-          <h4>შესვლა</h4>
+          <h4 class="below_icons--title">შესვლა</h4>
         </div>
       </div>
     </div>
-
     <!-- asidebar -->
 
     <div id="aside_slider">
+      <img
+        onclick="closeAside()"
+        id="close_tbn--aside"
+        src="./assets/header/burger-close.svg"
+        alt=""
+      />
       <div class="aside_slider--input">
         <form
           action=""
@@ -284,7 +296,24 @@
         </form>
       </div>
 
-      <div class="slider_content"></div>
+      <div class="slider_content">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sunt
+        distinctio. Totam fuga ex harum pariatur nostrum, temporibus odit ipsam,
+        magni Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae,
+        sunt distinctio. Totam fuga ex harum pariatur nostrum, temporibus odit
+        ipsam, magni Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Beatae, sunt distinctio. Totam fuga ex harum pariatur nostrum,
+        temporibus odit ipsam, magni Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Beatae, sunt distinctio. Totam fuga ex harum pariatur
+        nostrum, temporibus odit ipsam, magni Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit. Beatae, sunt distinctio. Totam fuga ex
+        harum pariatur nostrum, temporibus odit ipsam, magni Lorem ipsum dolor
+        sit amet consectetur, adipisicing elit. Beatae, sunt distinctio. Totam
+        fuga ex harum pariatur nostrum, temporibus odit ipsam, magni Lorem ipsum
+        dolor sit amet consectetur, adipisicing elit. Beatae, sunt distinctio.
+        Totam fuga ex harum pariatur nostrum, temporibus odit ipsam, magni
+        adipisci fugit quia mollitia optio, quam expedita quis libero?
+      </div>
     </div>
 
     <!-- popup  -->
