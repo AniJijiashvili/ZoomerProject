@@ -168,11 +168,23 @@
   display: flex;
   flex-wrap: wrap;
   gap: 21px;
-  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .branch-container {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .branch-container {
+    justify-content: center;
+  }
 }
 
 /* Branch card styling */
 .branch-card {
+  cursor: pointer;
   height: 110px;
   border-radius: 8px;
   background-color: #f2f2f2;
@@ -183,6 +195,11 @@
   /* Responsive width based on container size */
   flex: 1 1 calc(33.333% - 21px); /* Default: 3 cards per row */
   box-sizing: border-box;
+}
+
+.branch-card:hover {
+  cursor: pointer;
+  transform: scale(1.01);
 }
 
 /* Upper part styling */
@@ -229,6 +246,7 @@
 .branch-hours p {
   height: 14px;
   font-size: 12px;
+  font-weight: 700;
   color: #000000cc;
 }
 
