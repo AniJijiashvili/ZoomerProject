@@ -90,3 +90,27 @@ footer {
   font-size: 14px;
   line-height: 15px;
 }
+
+@media screen and (max-width: 1023px) {
+  .footer_content--container {
+    flex-wrap: wrap;
+    gap: 50px;
+    padding-bottom: 80px;
+  }
+  .footer__copyright {
+    margin-bottom: 80px;
+  }
+  #ecommerce {
+    position: absolute;
+    left: 0px;
+    height: 25px;
+    width: 135px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer_content--section {
+    width: 40%;
+    gap: 10px;
+  }
+}
