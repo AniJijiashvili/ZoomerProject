@@ -1,3 +1,6 @@
+// import { showCookieConsent, handleCookieDecision } from "./cookieConsentt.js";
+
+
 let mobiles, headPhones, smartWatch, fitness, mobileAccessories;
 let hoverSection = document.getElementsByClassName(
   "product-categories__featured--item"
@@ -613,3 +616,29 @@ document.addEventListener("mousemove", function (e) {
     ? ele.classList.add("more-width")
     : ele.classList.remove("more-width");
 });
+
+function showCookieConsent(){
+  const cookieConsent = localStorage.getItem("cookieConsent")
+
+  if(!cookieConsent){
+      setTimeout(()=>{
+          const consentDiv = document.getElementById("cookie-consent")
+          consentDiv.style.display= "block"
+
+      },3000)
+  }
+}
+
+function handleCookieDecision(decision){
+  localStorage.setItem("cookieConsent", decision);
+  const consentDiv = document.getElementById("cookie-consent")
+  consentDiv.style.display="none"
+}
+
+showCookieConsent();
+document.getElementById("accept-cookies").addEventListener("click", ()=>{
+  handleCookieDecision("accepted")
+})
+document.getElementById("reject-cookies").addEventListener("click", ()=>{
+  handleCookieDecision("rejected")
+})
