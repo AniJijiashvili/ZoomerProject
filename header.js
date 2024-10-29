@@ -39,8 +39,40 @@ function handlePopupOpen() {
   });
   handleDropdownCountries();
   handleAutorization();
+  handleInputAnimation();
+}
 
-  // handlePopupContent();
+// function handleInputAnimation() {
+//   const allInputs = document.querySelectorAll(".popup_input");
+//   const labels = document.querySelectorAll(".input_name");
+
+//   allInputs.forEach((input, index) => {
+//     input.addEventListener("click", () => {
+//       if (input.length) {
+//         labels[index].classList.add("active");
+//       }
+//     });
+//   });
+// }
+
+function handleInputAnimation() {
+  const allInputs = document.querySelectorAll(".popup_input");
+  const labels = document.querySelectorAll(".input_name");
+
+  allInputs.forEach((input, index) => {
+    input.addEventListener("focus", () => {
+      labels[index].classList.add("active");
+    });
+
+    input.addEventListener("blur", () => {
+      if (!input.value) {
+        labels[index].classList.remove("active");
+      }
+    });
+    if (input.value) {
+      labels[index].classList.add("active");
+    }
+  });
 }
 
 function handlePopupClose() {
@@ -79,10 +111,10 @@ function handleAutorization() {
                   <input
                     class="popup_input"
                     id="mail_input"
-                    type="password"
+                    type="text"
                     placeholder=" "
                   />
-                  <label for="">ელფოსტა</label>
+                  <label class="input_name" for="">ელფოსტა</label>
                 </div>
                 <div class="number_input-field">
                   <input
@@ -91,7 +123,7 @@ function handleAutorization() {
                     type="password"
                     placeholder=" "
                   />
-                  <label for="">პაროლი</label>
+                  <label class="input_name" for="">პაროლი</label>
                   <img
                     src="./assets/header/hiddenPassword.svg"
                     alt="passwrd_hide"
@@ -112,6 +144,7 @@ function handleAutorization() {
           ? "./assets/header/hiddenPassword.svg"
           : "./assets/header/showPassword.svg";
       });
+      handleInputAnimation();
     });
 
     numberBox.addEventListener("click", () => {
@@ -123,9 +156,10 @@ function handleAutorization() {
       popupInputs.innerHTML = `
       <div class="number_input-field">
       <input  class="popup_input" id="number_input" type="text" placeholder=" " />
-      <label for="">ტელეფონის ნომერი</label>
+      <label class="input_name" for="">ტელეფონის ნომერი</label>
     </div>
       `;
+      handleInputAnimation();
     });
   };
 
@@ -150,6 +184,7 @@ function handleRegistration() {
     წესებს, პირობებს და პერსონალურ მონაცემთა დაცვის პოლიტიკას</a
   >
 </p>`;
+  handleInputAnimation();
 }
 
 let clicked = false;
@@ -323,6 +358,7 @@ async function displaySearchValue() {
         event.target !== searchInput
       ) {
         searchResult.remove();
+        searchInput.value = "";
       }
     });
 
@@ -345,7 +381,6 @@ async function displaySearchValue() {
       allCategory.textContent = "ყველას ნახვა";
       allCategory.classList.add("category");
 
-      // Append elements
       categoryAnchor.appendChild(allCategory);
       searchResultTitle.appendChild(filterCategory);
       searchResultTitle.appendChild(categoryAnchor);
@@ -426,60 +461,51 @@ async function displaySearchValue() {
 function handleAsideSlider() {
   const asideSliderContainer = document.getElementById("aside_slider");
 
-
   const burgerIcon = document.getElementById("burger");
 
+  const search_conteiner = document.getElementById("#search_conteiner");
+  const burgerManu = document.getElementById("#burger");
+  const inputSearch = document.getElementById("#search_conteiner");
+  const headerIcons = document.getElementById("#header_icons");
+  const productCategories = document.getElementById("productCategoriesfor");
+  const mySwiper2for = document.getElementById("mySwiper2for");
 
-   
+  if (asideSliderContainer.style.display === "flex") {
+    asideSliderContainer.style.display = "none";
+    mySwiper2for.style.display = "none";
+    burgerIcon.src = "./assets/header/burger-icon.svg";
+    burgerIcon.classList.remove("close_btn");
 
-    const search_conteiner = document.getElementById("#search_conteiner");
-    const burgerManu = document.getElementById("#burger");
-    const inputSearch = document.getElementById("#search_conteiner");
-    const headerIcons = document.getElementById("#header_icons");
-    const productCategories = document.getElementById("productCategoriesfor");
-    const mySwiper2for = document.getElementById("mySwiper2for");
-   
+    search_conteiner.style.display = "flex";
+    asideSliderContainer.style.transform = "translateX(0%)";
+    // inputSearch.style.display = "flex";
+    // headerIcons.style.display = "none";
+    productCategories.style.display = "none";
+    mySwiper2for.style.display = "block";
+    productCategories.classList.toggle("show");
+    console.log("close");
+  } else {
+    asideSliderContainer.style.display = "flex";
+    asideSliderContainer.style.transform = "translateX(-100%)";
+    productCategories.style.display = "flex";
+    mySwiper2for.style.display = "none";
+    productCategories.classList.toggle("show");
 
-    if (asideSliderContainer.style.display === "flex") {
-      asideSliderContainer.style.display = "none";
-      mySwiper2for.style.display = "none";
-      burgerIcon.src = "./assets/header/burger-icon.svg";
-      burgerIcon.classList.remove("close_btn");
-   
-
-      search_conteiner.style.display = "flex";
-      asideSliderContainer.style.transform = "translateX(0%)";
-      // inputSearch.style.display = "flex";
-      // headerIcons.style.display = "none";
-      productCategories.style.display = "none";
-      mySwiper2for.style.display = "block";
-      productCategories.classList.toggle("show");
-      console.log("close");
-
-    } else {
-      asideSliderContainer.style.display = "flex";
-      asideSliderContainer.style.transform = "translateX(-100%)";
-      productCategories.style.display = "flex";
-      mySwiper2for.style.display = "none";
-      productCategories.classList.toggle("show");
-
-
-      console.log("open");
-    }
-    setTimeout(() => {
-      asideSliderContainer.style.transition = "transform 0.3s ease";
-      asideSliderContainer.style.transform = "translateX(0%)";
-    }, 10);
-  
+    console.log("open");
+  }
+  setTimeout(() => {
+    asideSliderContainer.style.transition = "transform 0.3s ease";
+    asideSliderContainer.style.transform = "translateX(0%)";
+  }, 10);
 }
 function closeAside() {
   const productCategories = document.getElementById("productCategoriesfor");
   const mySwiper2for = document.getElementById("mySwiper2for");
- 
+
   productCategories.style.display = "none";
-      mySwiper2for.style.display = "block";
-      productCategories.classList.toggle("show");
-      console.log("close");
+  mySwiper2for.style.display = "block";
+  productCategories.classList.toggle("show");
+  console.log("close");
 
   const asideSliderContainer = document.getElementById("aside_slider");
   asideSliderContainer.style.display = "none";
