@@ -1322,3 +1322,8 @@ header.active {
     object-fit: contain;
   }
 }
+@media screen and (max-width:480px){
+  #aside_slider{
+    height: 0%;
+  }
+}
