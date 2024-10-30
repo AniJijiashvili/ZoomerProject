@@ -96,6 +96,8 @@ footer {
     flex-wrap: wrap;
     gap: 50px;
     padding-bottom: 80px;
+    justify-content: center;
+
   }
   .footer__copyright {
     margin-bottom: 80px;

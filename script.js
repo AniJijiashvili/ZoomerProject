@@ -1,6 +1,5 @@
 // import { showCookieConsent, handleCookieDecision } from "./cookieConsentt.js";
 
-
 let mobiles, headPhones, smartWatch, fitness, mobileAccessories;
 let hoverSection = document.getElementsByClassName(
   "product-categories__featured--item"
@@ -491,14 +490,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.matchMedia("(max-width: 1024px)").matches) {
       for (let sectionLine of sectionLines) {
         sectionLine.style.borderLeft = "0";
-        (sectionLine.style.backgroundColor = "#f2f2f2")
-
+        sectionLine.style.backgroundColor = "#f2f2f2";
       }
 
       const sectionLine = event.currentTarget;
       (hoverSection[0].style.borderLeft = "0"),
         (sectionLine.style.borderLeft = "2px solid var(--orange-main)");
-        (sectionLine.style.backgroundColor = "white")
+      sectionLine.style.backgroundColor = "white";
     }
   }
 
@@ -516,11 +514,10 @@ function addEventListeners() {
 
   const handleEvent = (index) => {
     if (isMobile) {
-
       handleMouseLeave(mobileContainer[0], "block"),
         (hoverSection[0].style.borderLeft = "2px solid var(--orange-main)");
-        (hoverSection[0].style.backgroundColor = "white");
-        hoverSection[index].addEventListener("click", () =>
+      hoverSection[0].style.backgroundColor = "white";
+      hoverSection[index].addEventListener("click", () =>
         handleMouseOver(
           popupMobileSection[0],
           ...Array(8)
@@ -571,7 +568,7 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
 hoverSection[0].addEventListener("click", handleClick);
 
 window.addEventListener("resize", () => {
-  location.reload()
+  location.reload();
 
   if (window.matchMedia("(max-width: 1024px)").matches) {
     handleClick();
@@ -588,7 +585,7 @@ window.addEventListener("resize", () => {
       sectionLine.style.borderLeft = "0";
     }
     hoverSection[0].style.borderLeft = "0";
-    location.reload()
+    location.reload();
   }
 });
 
@@ -617,28 +614,44 @@ document.addEventListener("mousemove", function (e) {
     : ele.classList.remove("more-width");
 });
 
-function showCookieConsent(){
-  const cookieConsent = localStorage.getItem("cookieConsent")
+function showCookieConsent() {
+  const cookieConsent = localStorage.getItem("cookieConsent");
 
-  if(!cookieConsent){
-      setTimeout(()=>{
-          const consentDiv = document.getElementById("cookie-consent")
-          consentDiv.style.display= "block"
-
-      },3000)
+  if (!cookieConsent) {
+    setTimeout(() => {
+      const consentDiv = document.getElementById("cookie-consent");
+      consentDiv.style.display = "block";
+    }, 3000);
   }
 }
 
-function handleCookieDecision(decision){
+function handleCookieDecision(decision) {
   localStorage.setItem("cookieConsent", decision);
-  const consentDiv = document.getElementById("cookie-consent")
-  consentDiv.style.display="none"
+  const consentDiv = document.getElementById("cookie-consent");
+  consentDiv.style.display = "none";
 }
 
 showCookieConsent();
-document.getElementById("accept-cookies").addEventListener("click", ()=>{
-  handleCookieDecision("accepted")
-})
-document.getElementById("reject-cookies").addEventListener("click", ()=>{
-  handleCookieDecision("rejected")
-})
+document.getElementById("accept-cookies").addEventListener("click", () => {
+  handleCookieDecision("accepted");
+});
+document.getElementById("reject-cookies").addEventListener("click", () => {
+  handleCookieDecision("rejected");
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const chat = document.getElementById("zoommerChat-icon");
+  const zoommerChat = document.getElementById("zoommerChat");
+  const zommercloseBtn = document.getElementById("zoommerclose");
+
+  chat.addEventListener("click", () => {
+    zoommerChat.classList.toggle("show");
+  });
+
+  zommercloseBtn.addEventListener("click", () => {
+    zoommerChat.classList.remove("show");
+  });
+});

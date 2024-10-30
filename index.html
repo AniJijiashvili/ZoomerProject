@@ -102,7 +102,7 @@
                     </div>
                 </aside>
                 <div class="product-categories__featured__items__details">
-                    <div class="product-categories__featured__items__details--mobiles">
+                    <div class="product-categories__featured__items__details--mobiles" id="prodict-categoriesfor">
                         <div class="product-categories__featured__items__details--mobiles__content">
                             <div class="product-categories__featured__items__details--mobiles--mobilebrands"></div>
                             <div class="product-categories__featured__items__details--mobiles--headphones"></div>
@@ -271,7 +271,7 @@
               </div>
           </div>
     </section>
-    <section class="category-sliders">
+    <section class="category-sliders" id="category_sliders-id">
         <div class="sections-container">
           <div class="product-section">
             <h2 class="section-title">სულსწრაფი შეთავაზებები</h2>
@@ -484,22 +484,79 @@
           </div>
         </div>
       </section>
+    <div class="zoommer-icons">
       <div class="scroll--above" id="scrollToTop">
         <img src="/assets/iconmonstr-arrow-up-thin.svg" alt="arrow">
-    </div>
+      </div>
+      <div class="zoommer-compare">
+        <img src="./assets/compare.svg" alt="comp" />
+      </div>
+      <div class="zoommer-chat" id="zoommerChat-icon">
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          height="48px"
+          width="48px"
+          xmlns="http://www.w3.org/2000/svg"
+          style="
+            color: #fc9e00;
+            cursor: pointer;
+            font-size: 38px;
+            padding: 6px;
+            border-radius: 50%;
+            background: #fcdca7;
+            box-sizing: border-box;
+          "
+        >
+          <path
+            d="M425.9 170.4H204.3c-21 0-38.1 17.1-38.1 38.1v154.3c0 21 17.1 38 38.1 38h126.8c2.8 0 5.6 1.2 7.6 3.2l63 58.1c3.5 3.4 9.3 2 9.3-2.9v-50.6c0-6 3.8-7.9 9.8-7.9h1c21 0 42.1-16.9 42.1-38V208.5c.1-21.1-17-38.1-38-38.1z"
+          ></path>
+          <path
+            d="M174.4 145.9h177.4V80.6c0-18-14.6-32.6-32.6-32.6H80.6C62.6 48 48 62.6 48 80.6v165.2c0 18 14.6 32.6 32.6 32.6h61.1v-99.9c.1-18 14.7-32.6 32.7-32.6z"
+          ></path>
+        </svg>
+      </div>
+      
+    </div>  
+    <div class="zommerchat" id="zoommerChat">
+      <div class="zommerPopuplogo">
+          <img src="./assets/2222.png" alt="logo">
+          <div class="zoommerclose" id="zoommerclose" style="cursor: pointer;">
+              <div class="minus"></div>
+              <svg width="25px" height="25px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" fill="white"></rect>
+                  <path d="M7 17L16.8995 7.10051" stroke="#c8c8c8" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M7 7.00001L16.8995 16.8995" stroke="#c8c8c8" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+          </div>
+      </div>
+      <div class="zommerchatinformation">
+       <div class="chat_button">
+        <img src="./assets/4084044.png">
+        <p>ჩატის დაწყება</p>
+       </div>
+      </div>
+      <div class="zommerchatbot">
+          <p>Powered By</p>
+          <img src="./assets/1111.svg" alt="logo">
+      </div>
+  </div>
+
+
     <div id="cookie-consent" class="cookie-consent">
       <div class="cookie__details">
         <button id="reject-cookies">X</button>
         <div class="cookie__information">
           <h3 class="cookie__title">Cookie პოლიტიკა</h3>
           <div class="cookie__content">
-            <p class="cookie__text">საიტით სარგებლობის გაგრძელებით, შენ ეთანხმები Cookie ჩანაწერების გამოყენებას. მეტი ინფორმაცისათვის იხილით <a class="cookie__link" href="./personal.html">კონფიდენციალურობის პოლიტიკა</a></p>
+            <p class="cookie__text">საიტით სარგებლობის გაგრძელებით, შენ ეთანხმები Cookie ჩანაწერების გამოყენებას. მეტი ინფორმაცისათვის
+               იხილით <a class="cookie__link" href="./personal.html">კონფიდენციალურობის პოლიტიკა</a></p>
             <button id="accept-cookies">გასაგებია</button>
           </div>
         </div>
-
       </div>
-     
     </div>
     </main>
     <footer id="footer"></footer>

@@ -222,7 +222,7 @@ async function displayLanguageCountry() {
 
   const georgia = data.find((country) => country.name.common === "Georgia");
   const england = data.find(
-    (country) => country.name.common === "United Kingdom"
+    (country) => country.name.common === "United States"
   );
 
   uk.addEventListener("click", () => {
@@ -488,6 +488,17 @@ function handleAsideSlider() {
     asideSliderContainer.style.display = "flex";
     asideSliderContainer.style.transform = "translateX(-100%)";
     productCategories.style.display = "flex";
+    productCategories.style.position = "absolute";
+    productCategories.style.height = "auto";
+    productCategories.style.width = "100%";
+    productCategories.style.top = "0";
+    productCategories.style.left = "0";
+    document.getElementById("prodict-categoriesfor").style.marginBottom =
+      "100px";
+
+    productCategories.style.backgroundColor = "white";
+    document.getElementById("category_sliders-id").style.display = "none";
+
     mySwiper2for.style.display = "none";
     productCategories.classList.toggle("show");
 
